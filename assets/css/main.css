@@ -218,6 +218,13 @@ input, select, textarea {
 		max-width: 100%;
 		width: 1400px;
 	}
+	.container.lefty {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 1400px;
+		text-align: left;
+
+	}
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
