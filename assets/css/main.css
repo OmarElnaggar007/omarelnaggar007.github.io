@@ -225,6 +225,15 @@ input, select, textarea {
 		text-align: left;
 
 	}
+	.container.leftycoloured {
+		margin: 0 auto;
+		color: #3171B7;
+		font-style: italic;
+		max-width: 100%;
+		width: 1400px;
+		text-align: left;
+
+	}
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
