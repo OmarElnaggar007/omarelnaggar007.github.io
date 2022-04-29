@@ -225,10 +225,19 @@ input, select, textarea {
 		text-align: left;
 
 	}
-	.container.leftycoloured {
+	.container.leftyblue {
 		margin: 0 auto;
 		color: #3171B7;
 		font-style: italic;
+		max-width: 100%;
+		width: 1400px;
+		text-align: left;
+
+	}
+
+	.container.leftyred {
+		margin: 0 auto;
+		color: #A12932;
 		max-width: 100%;
 		width: 1400px;
 		text-align: left;
