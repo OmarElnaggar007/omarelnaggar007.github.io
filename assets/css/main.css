@@ -1796,6 +1796,35 @@ input, select, textarea {
 			width: 100%;
 			margin: 0 0 2em 0;
 		} */
+	
+	.responsive_cropped {
+		position: relative;
+		overflow: hidden;
+		padding-top: 56.2%;
+	}
+	.responsive_cropped iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/* margin-bottom: 50%; */
+	}
+
+	.responsive_cropped2 {
+		position: relative;
+		overflow: hidden;
+		width: 900px;
+		padding-top: 86.2%;
+	}
+	.responsive_cropped2 iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/* margin-bottom: 50%; */
+	}
 
 /* Image */
 
