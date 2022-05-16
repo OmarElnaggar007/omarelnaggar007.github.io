@@ -44,6 +44,70 @@
 								<li><a href="#publications" id="publications-link"><span class="icon solid fa-book">Publications</span></a></li>
 							</ul>
 						</nav>
+					
+					<!-- mike-icon -->
+					<div class="mike-icon">
+						<svg>
+							<g fill="none" stroke="white" stroke-width="2">
+								<path d="M50,50 L50,100 L80,100 L100,120 L110,120 L110,30
+								L100,30 L80,50 47,50" stroke-width="6"></path>
+								<path d="M120,30 A120,100 0 0,1 120,120" class="sound"></path>
+								<path d="M130,20 A120,100 0 0,1 130,130" class="sound"></path>
+								<path d="M140,10 A120,100 0 0,1 140,140" class="sound"></path>
+								<line x1="40" y1="120" x2="130" y2="10" stroke="red"
+								stroke-width="4" id="mute"></line>
+							</g>
+						</svg>
+					</div>
+					
+					<div class="volume">
+						<input type="range" class="range" value="75" min="0" max="100">
+						<!-- <span id="pervalue"></span> -->
+					</div>
+
+					<!-- Sound Control Script -->
+					<script type="text/javascript">
+						myAudio = new Audio('Audio/copyright_free_music.mp3'); 
+						if (typeof myAudio.loop == 'boolean')
+						{
+							myAudio.loop = true;
+						}
+						else
+						{
+							myAudio.addEventListener('ended', function() {
+								this.currentTime = 0;
+								this.play();
+							}, false);
+						}
+						myAudio.play();
+						document.getElementById('mute').style.display = "none";
+						var sound = document.getElementsByClassName('sound');
+						for (var i=0; i<sound.length; i++) {
+							sound[i].style.display = "block";
+						}
+						var line = document.getElementsByTagName('input')[0];
+						line.addEventListener('mousemove', function () {
+							// var pervalue = document.getElementById('pervalue');
+							var sp = document.getElementsByTagName('span')[0];
+							if (line.value == 0) {
+								// pervalue.innerHTML = "";
+								var sound = document.getElementsByClassName('sound');
+								for (var i=0; i<sound.length; i++) {
+									sound[i].style.display = "none";
+								}
+								document.getElementById('mute').style.display = "block";
+							}
+							if (line.value > 0) {
+								// pervalue.innerHTML = line.value + "%";
+								var sound = document.getElementsByClassName('sound');
+								for (var i=0; i<sound.length; i++) {
+									sound[i].style.display = "block";
+								}
+								document.getElementById('mute').style.display = "none";
+							}
+							myAudio.volume = line.value / 100;
+						})
+					</script>
 
 				</div>
 

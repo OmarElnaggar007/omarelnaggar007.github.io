@@ -285,6 +285,59 @@ input, select, textarea {
 
 		}
 
+/* mike-icon */
+.mike-icon {
+	width: 200px;
+	height: 20%;
+	/* float: left; */
+	margin-left: auto;
+	margin-right: auto;
+}
+svg {
+	width: 170px;
+	height: 140px;
+	float: left;
+}
+.volume {
+	width: 190px;
+	height: 100px;
+	/* background: red; */
+	/* float: left; */
+	margin-left: auto;
+	margin-right: auto;
+	/* position: absolute; */
+}
+input {
+	width: 190px;
+	-webkit-appearance: none;
+	height: 20px;
+	background: #dcf1f1;
+	top: 100px;
+	left: 0px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	background: purple;
+	cursor: pointer;
+	box-shadow: -95px 0 0 95px #d37c86;
+}
+.volume span {
+	position: absolute;
+	right: -100px;
+	/* background: red; */
+	top: 110px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.sound {
+	display:none;
+}
+
 /* Row */
 
 	.row {
