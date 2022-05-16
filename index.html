@@ -35,6 +35,19 @@
 							<p>Researcher &middot Engineer &middot Entrepreneur</p>
 						</div>
 
+						<div class="bottom">
+
+							<!-- Social Icons -->
+								<ul class="icons">
+									<!-- <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li> -->
+									<!-- <li><a href="#" class="icon brands fa-google"><span class="label">Google</span></a></li> -->
+									<li><a href="https://scholar.google.com/citations?user=WMiYlPEAAAAJ&hl=en&oi=ao" class="ai ai-google-scholar-square ai-1x"></a></li>
+									<!-- <li><i class="ai ai-google-scholar-square ai-1x"></i></li> -->
+									<li><a href="https://www.linkedin.com/in/omar-elnaggar/" class="fab fa-linkedin"></a></li>
+								</ul>
+		
+						</div>
+
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
@@ -49,7 +62,7 @@
 					<div class="mike-icon">
 						<svg>
 							<g fill="none" stroke="white" stroke-width="2">
-								<path d="M50,50 L50,100 L80,100 L100,120 L110,120 L110,30
+								<path fill="white" fill-opacity="0.2" d="M50,50 L50,100 L80,100 L100,120 L110,120 L110,30
 								L100,30 L80,50 47,50" stroke-width="6"></path>
 								<path d="M120,30 A120,100 0 0,1 120,120" class="sound"></path>
 								<path d="M130,20 A120,100 0 0,1 130,130" class="sound"></path>
@@ -61,13 +74,13 @@
 					</div>
 					
 					<div class="volume">
-						<input type="range" class="range" value="75" min="0" max="100">
+						<input type="range" class="range" value="0" min="0" max="100">
 						<!-- <span id="pervalue"></span> -->
 					</div>
 
 					<!-- Sound Control Script -->
 					<script type="text/javascript">
-						myAudio = new Audio('Audio/copyright_free_music.mp3'); 
+						myAudio = new Audio("Audio/copyright_free_music.mp3"); 
 						if (typeof myAudio.loop == 'boolean')
 						{
 							myAudio.loop = true;
@@ -79,11 +92,9 @@
 								this.play();
 							}, false);
 						}
-						myAudio.play();
-						document.getElementById('mute').style.display = "none";
 						var sound = document.getElementsByClassName('sound');
 						for (var i=0; i<sound.length; i++) {
-							sound[i].style.display = "block";
+							sound[i].style.display = "none";
 						}
 						var line = document.getElementsByTagName('input')[0];
 						line.addEventListener('mousemove', function () {
@@ -99,6 +110,7 @@
 							}
 							if (line.value > 0) {
 								// pervalue.innerHTML = line.value + "%";
+								myAudio.play();
 								var sound = document.getElementsByClassName('sound');
 								for (var i=0; i<sound.length; i++) {
 									sound[i].style.display = "block";
@@ -111,18 +123,7 @@
 
 				</div>
 
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<!-- <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li> -->
-							<!-- <li><a href="#" class="icon brands fa-google"><span class="label">Google</span></a></li> -->
-							<li><a href="https://scholar.google.com/citations?user=WMiYlPEAAAAJ&hl=en&oi=ao" class="ai ai-google-scholar-square ai-1x"></a></li>
-							<!-- <li><i class="ai ai-google-scholar-square ai-1x"></i></li> -->
-							<li><a href="https://www.linkedin.com/in/omar-elnaggar/" class="fab fa-linkedin"></a></li>
-						</ul>
-
-				</div>
+				
 
 			</div>
 

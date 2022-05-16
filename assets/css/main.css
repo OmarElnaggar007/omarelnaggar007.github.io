@@ -288,7 +288,7 @@ input, select, textarea {
 /* mike-icon */
 .mike-icon {
 	width: 200px;
-	height: 20%;
+	height: 0%;
 	/* float: left; */
 	margin-left: auto;
 	margin-right: auto;
@@ -327,12 +327,14 @@ input::-webkit-slider-thumb {
 	box-shadow: -95px 0 0 95px #d37c86;
 }
 .volume span {
-	position: absolute;
-	right: -100px;
+	position: relative;
+	right: 20px;
 	/* background: red; */
-	top: 110px;
+	/* top: 0px; */
+	/* margin-left: auto;
+	margin-right: auto; */
 	font-size: 20px;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 .sound {
 	display:none;
@@ -2248,7 +2250,7 @@ input::-webkit-slider-thumb {
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
-			padding: 1.5em 0 0.75em 0;
+			padding: 0 0 0.75em 0;
 		}
 
 			#header .bottom > :last-child {
