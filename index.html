@@ -20,6 +20,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 	</head>
 	<body class="is-preload">
 
@@ -62,15 +65,20 @@
 					<div class="mike-icon">
 						<svg>
 							<g fill="none" stroke="white" stroke-width="2">
-								<path fill="white" fill-opacity="0.2" d="M50,50 L50,100 L80,100 L100,120 L110,120 L110,30
-								L100,30 L80,50 47,50" stroke-width="6"></path>
-								<path d="M120,30 A120,100 0 0,1 120,120" class="sound"></path>
-								<path d="M130,20 A120,100 0 0,1 130,130" class="sound"></path>
-								<path d="M140,10 A120,100 0 0,1 140,140" class="sound"></path>
-								<line x1="40" y1="120" x2="130" y2="10" stroke="red"
+								<path fill="white" fill-opacity="0.2" d="M10,50 L10,80 L30,80 L50,100 L60,100 L60,30
+								L50,30 L30,50 10,50" stroke-width="2"></path>
+								<path d="M70,30 A120,100 0 0,1 70,100" class="sound"></path>
+								<path d="M80,20 A120,100 0 0,1 80,110" class="sound"></path>
+								<path d="M90,10 A120,100 0 0,1 90,120" class="sound"></path>
+								<line x1="10" y1="105" x2="70" y2="10" stroke="red" stroke-opacity="0.7"
 								stroke-width="4" id="mute"></line>
 							</g>
 						</svg>
+						<p id="mute-text">
+							Better<br />
+							with<br />
+							sound!
+						</p>
 					</div>
 					
 					<div class="volume">
@@ -107,6 +115,7 @@
 									sound[i].style.display = "none";
 								}
 								document.getElementById('mute').style.display = "block";
+								document.getElementById('mute-text').style.display = "block";
 							}
 							if (line.value > 0) {
 								// pervalue.innerHTML = line.value + "%";
@@ -116,6 +125,7 @@
 									sound[i].style.display = "block";
 								}
 								document.getElementById('mute').style.display = "none";
+								document.getElementById('mute-text').style.display = "none";
 							}
 							myAudio.volume = line.value / 100;
 						})
