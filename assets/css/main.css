@@ -2019,6 +2019,7 @@ input::-webkit-slider-thumb {
 
 		ul.icons a {
 			display: inline-block;
+			/* background: red; */
 			width: 2em;
 			height: 2em;
 			line-height: 2em;
@@ -2261,9 +2262,10 @@ input::-webkit-slider-thumb {
 		#header .bottom {
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
+			/* background: red; */
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
-			padding: 0 0 0.75em 0;
+			padding: 0 0 0em 0;
 		}
 
 			#header .bottom > :last-child {
@@ -2271,7 +2273,7 @@ input::-webkit-slider-thumb {
 			}
 
 		#header .icons {
-			font-size: 1.4em;
+			font-size: 2.0em;
 			text-align: center;
 		}
 
@@ -2289,7 +2291,8 @@ input::-webkit-slider-thumb {
 
 	#logo {
 		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
+		/* background: red; */
+		margin: 1.75em 1.5em 0em 1.5em;
 		min-height: 48px;
 		cursor: default;
 	}
@@ -2329,7 +2332,7 @@ input::-webkit-slider-thumb {
 
 			#nav ul li a {
 				display: block;
-				padding: 0.5em 1.5em 0.5em 1.5em;
+				padding: 0em 1.5em 0em 1.5em;
 				color: rgba(255, 255, 255, 0.5);
 				text-decoration: none;
 				outline: 0;
