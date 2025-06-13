@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>PID‑Controlled Two‑Link Planar Manipulator</h2>
-<canvas id="robotCanvas" width="520" height="520"></canvas>
+<canvas id="robotCanvas" width="364" height="364"></canvas>
 
 <div class="controls">
   <!-- PID gains -->
@@ -43,7 +43,7 @@
 <script>
 const cvs = document.getElementById('robotCanvas');
 const ctx = cvs.getContext('2d');
-const L1 = 120, L2 = 120;        // link lengths (px)
+const L1 = 84, L2 = 84;        // link lengths (px)
 let q = [0, 0];                  // joint angles (rad)
 let qDot = [0, 0];               // joint velocities (rad/s)
 const dt = 0.02;                 // sim timestep (s)
