@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive 2-Link Robot (PID + Damping + Settling-Time)</title>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #robotCanvas { border: 1px solid #999; background: #fafafa; display: block; margin: 0 auto; }
+    .controls { margin-top: 8px; font-family: sans-serif; text-align: center; }
+    label { margin-right: 8px; }
+    .metrics { margin-top: 6px; font-family: monospace; white-space: pre; text-align: center; }
+    button { margin-right: 6px; padding: 4px 12px; font-size: 14px; }
+    .val { display: inline-block; width: 45px; text-align: right; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">PID-Controlled Two-Link Planar Manipulator</h2>
+  <canvas id="robotCanvas"></canvas>
+
+  <div class="controls">
+    <strong>PID Gains (both joints)</strong><br>
+    <label>K<sub>p</sub> <input type="range" id="kp" min="0" max="20" step="0.1" value="10"></label>
+    <label>K<sub>i</sub> <input type="range" id="ki" min="0" max="5" step="0.01" value="0"></label>
+    <label>K<sub>d</sub> <input type="range" id="kd" min="0" max="5" step="0.1" value="1"></label>
+    <br><br>
+    <strong>Damping&nbsp;</strong>
+    <label><input type="range" id="damp" min="0.90" max="0.999" step="0.001" value="0.970"> <span id="dVal" class="val">0.970</span></label>
+    <br><br>
+    <strong>Target Angles (deg)</strong><br>
+    <label>θ₁* <input type="range" id="t1" min="-180" max="180" step="1" value="0"> <span id="t1Val" class="val">0°</span></label>
+    <label>θ₂* <input type="range" id="t2" min="-180" max="180" step="1" value="0"> <span id="t2Val" class="val">0°</span></label>
+    <br><br>
+    <button id="startBtn">Start</button>
+    <button id="pauseBtn">Pause</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <div class="metrics" id="metrics"></div>
+
+  <script>
+    const cvs = document.getElementById('robotCanvas');
+    const ctx = cvs.getContext('2d');
+    const BASE_SIZE = 520;              // original reference size
+    const L_RATIO = 120 / BASE_SIZE;    // link-length ratio
+
+    // Make canvas responsive and reduce size by additional 30%
+    function resizeCanvas() {
+      // 0.8 of viewport, then 0.7 to reduce by 30% more
+      const size = Math.min(window.innerWidth, window.innerHeight) * 0.8 * 0.7;
+      cvs.width = size;
+      cvs.height = size;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Simulation state
+    let q = [0, 0], qDot = [0, 0];
+    const dt = 0.02;
+    let running = false;
+    let simClock = 0, settleTime = null, targetChanged = true;
+
+    class PID {
+      constructor(kp, ki, kd) { this.kp = kp; this.ki = ki; this.kd = kd; this.int = 0; this.prevErr = 0; }
+      update(err) {
+        this.int += err * dt;
+        const der = (err - this.prevErr) / dt;
+        this.prevErr = err;
+        return this.kp * err + this.ki * this.int + this.kd * der;
+      }
+      reset() { this.int = 0; this.prevErr = 0; }
+    }
+    let pid1 = new PID(10, 0, 1), pid2 = new PID(10, 0, 1);
+
+    const rad = d => d * Math.PI / 180;
+    const deg = r => r * 180 / Math.PI;
+    const posTol = rad(0.5), velTol = 0.01;
+
+    function updVals() {
+      t1Val.textContent = `${t1.value}°`;
+      t2Val.textContent = `${t2.value}°`;
+      dVal.textContent = +damp.value;
+      targetChanged = true;
+      settleTime = null;
+    }
+    [t1, t2, damp].forEach(el => el.addEventListener('input', updVals));
+    updVals();
+
+    function step() {
+      if (targetChanged) { simClock = 0; targetChanged = false; }
+      simClock += dt;
+
+      pid1.kp = pid2.kp = +kp.value;
+      pid1.ki = pid2.ki = +ki.value;
+      pid1.kd = pid2.kd = +kd.value;
+      const damping = +damp.value;
+
+      const θ1Abs = rad(-(+t1.value));
+      const θ2Abs = rad(-(+t2.value));
+      const tgt = [θ1Abs, θ2Abs - θ1Abs];
+      const e = [tgt[0] - q[0], tgt[1] - q[1]];
+
+      let u = [
+        Math.max(-1, Math.min(1, pid1.update(e[0]))),
+        Math.max(-1, Math.min(1, pid2.update(e[1])))
+      ];
+
+      qDot[0] *= damping; qDot[1] *= damping;
+
+      let allSettled = true;
+      for (let i = 0; i < 2; i++) {
+        if (Math.abs(e[i]) < posTol && Math.abs(qDot[i]) < velTol) {
+          q[i] = tgt[i]; qDot[i] = 0; u[i] = 0;
+          (i ? pid2 : pid1).reset();
+        } else allSettled = false;
+      }
+      if (allSettled && settleTime === null) settleTime = simClock.toFixed(2);
+
+      qDot[0] += u[0] * dt;
+      qDot[1] += u[1] * dt;
+      q[0] += qDot[0] * dt;
+      q[1] += qDot[1] * dt;
+
+      metrics.textContent =
+        `θ₁: ${deg(q[0]).toFixed(1)}° (err ${deg(e[0]).toFixed(1)}°)` +
+        ` | θ₂: ${deg(q[1]).toFixed(1)}° (err ${deg(e[1]).toFixed(1)}°)
+` +
+        `Elapsed: ${simClock.toFixed(2)} s` +
+        (settleTime ? ` | Settled in: ${settleTime} s` : '');
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, cvs.width, cvs.height);
+      ctx.save(); ctx.translate(cvs.width / 2, cvs.height / 2);
+
+      const L1 = cvs.width * L_RATIO;
+      const L2 = cvs.width * L_RATIO;
+      const x1 = L1 * Math.cos(q[0]);
+      const y1 = L1 * Math.sin(q[0]);
+      const x2 = x1 + L2 * Math.cos(q[0] + q[1]);
+      const y2 = y1 + L2 * Math.sin(q[0] + q[1]);
+
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(x1, y1);
+      ctx.strokeStyle = "#0074D9"; ctx.lineWidth = 4; ctx.stroke();
+
+      ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+      ctx.strokeStyle = "#3D9970"; ctx.lineWidth = 4; ctx.stroke();
+
+      [[0, 0], [x1, y1], [x2, y2]].forEach(([x, y]) => {
+        ctx.beginPath(); ctx.arc(x, y, 6, 0, 2 * Math.PI); ctx.fillStyle = "#85144b"; ctx.fill();
+      });
+
+      ctx.restore();
+    }
+
+    function loop() { if (running) step(); draw(); requestAnimationFrame(loop); }
+    loop();
+
+    startBtn.onclick = () => running = true;
+    pauseBtn.onclick = () => running = false;
+    resetBtn.onclick = () => { running = false; q=[0,0]; qDot=[0,0]; pid1.reset(); pid2.reset(); simClock=0; settleTime=null; targetChanged=true; draw(); };
+  </script>
+</body>
+</html>
