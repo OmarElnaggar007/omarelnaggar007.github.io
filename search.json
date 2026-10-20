@@ -1,0 +1,324 @@
+[
+  {
+    "objectID": "talks/2026-09-04-biomedeng-sleep-posture/index.html",
+    "href": "talks/2026-09-04-biomedeng-sleep-posture/index.html",
+    "title": "Wearable sleep posture classification using one-shot learning of biomechanical signatures",
+    "section": "",
+    "text": "Work with Roselina Arelhi, Frans Coenen, Andrew Hopkinson and Paolo Paoletti.\nOral presentation, session O26: Craniofacial, Soft-Tissue and Sports Biomechanics. Scheduled for 15:20–15:30 in Space Six.\nRelated research: Sleep wearables.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2025-07-02-advance-he-interactive-learning/index.html",
+    "href": "talks/2025-07-02-advance-he-interactive-learning/index.html",
+    "title": "A generative AI-empowered framework for creating interactive learning materials without prior technical expertise",
+    "section": "",
+    "text": "Cover artwork recreated for this website.\nWork with Roselina Arelhi.\nOral presentation D2.4.6c, in the 15:20–16:20 session, Seminar 02.\nRelated research: Educational technology.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2025-02-heel-pad-research-update/index.html",
+    "href": "talks/2025-02-heel-pad-research-update/index.html",
+    "title": "Heel fat pad morphology and biomechanics: Ageing, footwear and anthropology",
+    "section": "",
+    "text": "Related research: Movement and tissue biomechanics.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2023-02-24-sensors-perception-robotics/index.html",
+    "href": "talks/2023-02-24-sensors-perception-robotics/index.html",
+    "title": "Sensors and Perception in Robotics",
+    "section": "",
+    "text": "Related research: Research.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2022-07-05-advance-he-virtual-laboratories/index.html",
+    "href": "talks/2022-07-05-advance-he-virtual-laboratories/index.html",
+    "title": "Design and Development of Game-based Learning for Virtual Engineering Laboratories: Two Case Studies",
+    "section": "",
+    "text": "Work with Roselina Arelhi.\nOral presentation D1.1.9c, in the 10:35–11:35 session.\nRelated research: Educational technology.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2021-07-ece-knowledge-exchange/index.html",
+    "href": "talks/2021-07-ece-knowledge-exchange/index.html",
+    "title": "Quantification of Knowledge Exchange within Classrooms: An AI-based Approach",
+    "section": "",
+    "text": "Work with Roselina Arelhi.\nConference dates: 15–18 July 2021 (online).\nRelated research: Educational technology.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2020-12-08-digital-health-sleep-sensing/index.html",
+    "href": "talks/2020-12-08-digital-health-sleep-sensing/index.html",
+    "title": "Wearable Sensing for Non-Invasive Human Pose Recognition During Sleep",
+    "section": "",
+    "text": "Work with Frans Coenen and Paolo Paoletti.\nRelated research: Sleep wearables.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "research/sleep-posture/index.html",
+    "href": "research/sleep-posture/index.html",
+    "title": "Sleep wearables",
+    "section": "",
+    "text": "Sleep posture analysis with intelligent wearable sensing."
+  },
+  {
+    "objectID": "research/sleep-posture/index.html#what-draws-me-to-this-area",
+    "href": "research/sleep-posture/index.html#what-draws-me-to-this-area",
+    "title": "Sleep wearables",
+    "section": "1 What draws me to this area",
+    "text": "1 What draws me to this area\nI am interested in how wearable technologies can help us understand body posture and movement during sleep. This area brings together several things that motivate my research: developing sensing systems, understanding human biomechanics, and turning measurements into information that clinicians and lay users can interpret and act upon.\nBeyond recognising an individual posture, I am interested in the patterns that emerge over time: how positions change, how long they are maintained, and what we can learn from the relationship between in-bed posture/movement and other physiological phenomena."
+  },
+  {
+    "objectID": "research/sleep-posture/index.html#questions-that-interest-me",
+    "href": "research/sleep-posture/index.html#questions-that-interest-me",
+    "title": "Sleep wearables",
+    "section": "2 Questions that interest me",
+    "text": "2 Questions that interest me\nSome of the questions I explore include:\n\nHow much can we learn about body posture from a finite set of biomechanical and sensor measurements?\nHow can we recognise different postures when collecting large labelled datasets is difficult?\nHow can we describe posture changes and periods of inactivity in an understandable way?\n\nThese questions also open opportunities to connect wearable sensing with wider interests in biomechanics, human movement and healthcare engineering."
+  },
+  {
+    "objectID": "research/sleep-posture/index.html#bringing-sensing-and-interpretation-together",
+    "href": "research/sleep-posture/index.html#bringing-sensing-and-interpretation-together",
+    "title": "Sleep wearables",
+    "section": "3 Bringing sensing and interpretation together",
+    "text": "3 Bringing sensing and interpretation together\nMy work combines bespoke wearable sensor development, measurements of joint orientation and movement, and computational methods for recognising patterns. I am particularly interested in representations that connect sensor measurements to the biophysical quantities they describe.\nRather than treating sensing and analysis as separate tasks, I explore how the choice of measurements and the methods used to interpret them can work together to provide useful information about posture and movement."
+  },
+  {
+    "objectID": "research/sleep-posture/index.html#contributions-from-my-work",
+    "href": "research/sleep-posture/index.html#contributions-from-my-work",
+    "title": "Sleep wearables",
+    "section": "4 Contributions from my work",
+    "text": "4 Contributions from my work\nWorking with collaborators, I have explored how complex sleep postures can be recognised from joint-angle information using very limited labelled training data. Our one-shot learning framework examined twelve non-standard postures through computer-generated data and a human-participant pilot study, bringing together wearable sensing, sensor fusion and kinematic data augmentation. Read the posture-learning paper.\nA complementary strand of work examines when posture changes occur and how periods of postural inactivity can be described. We developed an interpretable framework using wrist kinematics, evaluated in a controlled study with five healthy participants during simulated sleep. This connects posture recognition with an understanding of movement over time. Read the posture-change and inactivity paper.\nTogether, these studies contribute methods for analysing sleep-related posture and movement, while providing a foundation for further investigation in varied contexts."
+  },
+  {
+    "objectID": "research/sleep-posture/index.html#possibilities-and-connections",
+    "href": "research/sleep-posture/index.html#possibilities-and-connections",
+    "title": "Sleep wearables",
+    "section": "5 Possibilities and connections",
+    "text": "5 Possibilities and connections\nI am interested in extending this work towards sensing approaches that are practical, adaptable and informative beyond controlled experiments. Possible directions include understanding differences between individuals, learning with limited examples, and exploring how movement information could support broader biomechanics and healthcare research.\nI would welcome conversations with researchers, clinicians and prospective research students who share these interests—or who bring complementary ideas. There is room for contributions spanning sensor development, intelligent algorithms, experimental biomechanics and the interpretation of human movement.\nGet in touch (elnaggar.omar at outlook dot com)."
+  },
+  {
+    "objectID": "research/sleep-posture/index.html#selected-work",
+    "href": "research/sleep-posture/index.html#selected-work",
+    "title": "Sleep wearables",
+    "section": "6 Selected work",
+    "text": "6 Selected work\n\nPosture recognition with limited examples: One-shot learning using extremity joint kinematics — Information Fusion, 2023.\nMovement over time: Posture-change detection and inactivity segmentation using wrist kinematics — Scientific Reports, 2023.\nA broader perspective: Sleep posture analysis: clinical, sensing and intelligent perception perspectives — book chapter, 2025.\n\n\n← Back to Research"
+  },
+  {
+    "objectID": "research/engineering-education/index.html",
+    "href": "research/engineering-education/index.html",
+    "title": "Educational technology",
+    "section": "",
+    "text": "A beam-deflection experiment from my virtual engineering laboratory work with The University of Sheffield. The gamified environment brings apparatus, measurements and engineering concepts into a shared space for exploration."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#what-draws-me-to-this-area",
+    "href": "research/engineering-education/index.html#what-draws-me-to-this-area",
+    "title": "Educational technology",
+    "section": "1 What draws me to this area",
+    "text": "1 What draws me to this area\nI am interested in how students develop an understanding of engineering: how they connect theory with the behaviour of real systems, learn through experimentation, and develop confidence in their own judgement. My work explores the design of assessments and digital resources to support that process.\nMy experience teaching robotics, mechatronics, control and engineering computing has made these connections especially important to me. An equation becomes more meaningful when students can change a parameter, observe what happens and explain why. Equally, building a working system creates opportunities to question assumptions, interpret imperfect measurements and learn from unexpected behaviour.\nI want to create learning experiences that give students room to investigate, discuss and make decisions, while helping educators quantify, understand and support that learning."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#questions-that-interest-me",
+    "href": "research/engineering-education/index.html#questions-that-interest-me",
+    "title": "Educational technology",
+    "section": "2 Questions that interest me",
+    "text": "2 Questions that interest me\nSome questions that motivate my work include:\n\nHow can interactive activities help students ground engineering theory in practice?\nHow can virtual and physical laboratories complement one another?\nHow can we quantify and interpret within-class knowledge exchange in collaborative activities?\nHow can educators create useful, accessible interactive teaching materials?\n\nThese are starting points for exploration. Different engineering subjects, student backgrounds and teaching contexts bring further questions of their own."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#learning-through-experimentation",
+    "href": "research/engineering-education/index.html#learning-through-experimentation",
+    "title": "Educational technology",
+    "section": "3 Learning through experimentation",
+    "text": "3 Learning through experimentation\nI am interested in practical learning that gives students meaningful choices: forming a prediction, testing an idea, comparing observations and revising an explanation. Physical laboratories, design-build activities and virtual experiments offer different opportunities for this kind of exploration.\nWorking with collaborators, I have developed game-based virtual engineering laboratories, including work presented through mechanical and computer engineering case studies at the Advance HE Teaching and Learning Conference in 2022. I also served as technology lead and co-investigator on the Studentainment virtual-laboratory project.\nFor me, the interesting challenge is connecting the activity with what students need to understand. I would like to explore how virtual environments can support preparation, repeated experimentation and reflection alongside the practical experience of working with physical equipment."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#making-engineering-concepts-interactive",
+    "href": "research/engineering-education/index.html#making-engineering-concepts-interactive",
+    "title": "Educational technology",
+    "section": "4 Making engineering concepts interactive",
+    "text": "4 Making engineering concepts interactive\nInteractive resources can let students explore relationships that are difficult to communicate through a static diagram alone. In my teaching materials, I use controls and visual feedback to invite students to change a system’s parameters and examine its response. Robot control provides one example of this approach.\nWith Roselina Arelhi, I presented a framework for creating interactive learning materials with generative AI at Advance HE in 2025. This work explores how educators can develop and customise resources without extensive technical expertise.\nI am interested in making this process more approachable while keeping educators’ judgement central: checking technical accuracy, choosing useful interactions and considering how different students will access and use the material.\n\n\nWatch an example: exploring robot control\n\n\n\n\n\n\n\n\nA recorded demonstration of my interactive robot-control teaching material. It shows parameter controls alongside visual feedback about system behaviour."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#understanding-learning-and-collaboration",
+    "href": "research/engineering-education/index.html#understanding-learning-and-collaboration",
+    "title": "Educational technology",
+    "section": "5 Understanding learning and collaboration",
+    "text": "5 Understanding learning and collaboration\nEngineering work depends on explaining ideas, interpreting someone else’s work and contributing to shared decisions. I am interested in learning activities that make those processes visible, and in evidence that helps educators understand students’ developing knowledge.\nIn our 2021 classroom knowledge-exchange study, Roselina Arelhi and I explored a group-coursework framework involving a handover between teams. We combined survey information with AI-based visualisation to investigate students’ knowledge alongside conventional assessment measures.\nThis experience informs my interest in authentic assessment, constructive feedback and collaborative learning. More recently, I have contributed to a departmental, evidence-led demonstrator-training development at Queen Mary’s School of Engineering and Materials Science. Across these activities, I want to understand both the learning experience and the support students need to participate effectively."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#possibilities-and-connections",
+    "href": "research/engineering-education/index.html#possibilities-and-connections",
+    "title": "Educational technology",
+    "section": "6 Possibilities and connections",
+    "text": "6 Possibilities and connections\nI would like to explore further connections between practical engineering education, interactive resources and the evaluation of learning. Possible directions include linking virtual and physical experiments, developing resources with students and educators, and examining how different learners engage with collaborative activities.\nI welcome conversations with engineering educators, education researchers, developers and prospective research students. If you are interested in laboratory learning, interactive engineering concepts, knowledge exchange or thoughtful uses of AI in education, I would be pleased to hear from you.\nGet in touch (elnaggar.omar at outlook dot com)."
+  },
+  {
+    "objectID": "research/engineering-education/index.html#selected-work",
+    "href": "research/engineering-education/index.html#selected-work",
+    "title": "Educational technology",
+    "section": "7 Selected work",
+    "text": "7 Selected work\n\nVirtual engineering laboratories: Design and development of game-based learning for virtual engineering laboratories: Two case studies, Advance HE conference presentation and abstract, 2022.\nCreating interactive resources: A generative AI-empowered framework for creating interactive learning materials without prior technical expertise, Advance HE conference presentation and abstract, 2025.\nLearning through knowledge exchange: Quantification of Knowledge Exchange within Classrooms: An AI-based Approach, The European Conference on Education: Official Conference Proceedings, 2021.\n\n\n← Back to Research"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Year - Oldest\n      \n      \n        Year - Newest\n      \n      \n        Title\n      \n      \n        Venue\n      \n      \n        First\n      \n      \n        Last\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nYear\n\n\n\nTitle\n\n\n\nVenue\n\n\n\nFirst\n\n\n\nLast\n\n\n\n\n\n\n\n\n2025\n\n\nImpact of ageing on the heel pad: ultrasound imaging of the macrolayer, microlayer and skin\n\n\nFootwear Science\n\n\n \n\n\n \n\n\n\n\n\n\n2025\n\n\nFootwear Choice and Locomotor Health Throughout the Life Course: A Critical Review\n\n\nHealthcare\n\n\n \n\n\n \n\n\n\n\n\n\n2025\n\n\nIntelligent Wearable Sensing for Human Sleep Posture Classification and Temporal Analyses: From Simulation to Real World\n\n\nUniversity of Liverpool\n\n\n \n\n\n \n\n\n\n\n\n\n2025\n\n\nSleep posture analysis: state-of-the-art and opportunities of wearable technologies from clinical, sensing and intelligent perception perspectives\n\n\nBiomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2023\n\n\nAn interpretable framework for sleep posture change detection and postural inactivity segmentation using wrist kinematics\n\n\nScientific Reports\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2023\n\n\nSleep posture one-shot learning framework based on extremity joint kinematics: In-silico and in-vivo case studies\n\n\nInformation Fusion\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2023\n\n\nKIDS: kinematics-based (in)activity detection and segmentation in a sleep case study\n\n\narXiv\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2023\n\n\nKIDS: kinematics-based (in)activity detection and segmentation in a sleep case study\n\n\nUniversity of Liverpool\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2022\n\n\nSleep Posture One-Shot Learning Framework Using Kinematic Data Augmentation: In-Silico and In-Vivo Case Studies\n\n\narXiv\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2021\n\n\nQuantification of Knowledge Exchange within Classrooms: An AI-based Approach\n\n\nThe European Conference on Education 2021: Official Conference Proceedings\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2020\n\n\nIn-Bed Human Pose Classification Using Sparse Inertial Signals\n\n\nArtificial Intelligence XXXVII\n\n\nFirst author\n\n\n \n\n\n\n\n\n\n2019\n\n\nA New Unsupervised Short-Utterance based Speaker Identification Approach with Parametric t-SNE Dimensionality Reduction\n\n\n2019 International Conference on Artificial Intelligence in Information and Communication (ICAIIC)\n\n\nFirst author\n\n\n \n\n\n\n\n\n\nNo matching items\n\n  \n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6272696566636173652d3234203e7d7d-what-i-do",
+    "href": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6272696566636173652d3234203e7d7d-what-i-do",
+    "title": "Omar Elnaggar",
+    "section": " What I Do",
+    "text": "What I Do\nRobotics and automation teaching\nI help undergraduate and postgraduate students turn engineering theory into working systems. My teaching spans robotics, mechatronics, control, artificial intelligence and engineering computing, using authentic practical laboratories, design-build activities and project supervision to develop technical skills, critical thinking and professional judgement. At UCL, I contribute to Robotics for Medicine and Industry, teaching prosthetics, wearable technologies and biomechanics.\nWearable sensing and biomechanics research\nI develop and evaluate methods to understand human posture and movement, combining wearable sensors, machine learning, experimental measurements and computational modelling. My doctoral research focused on intelligent wearable sensing for sleep posture assessment. My subsequent research experience includes clinical gait analysis and the biomechanics of ageing foot tissues, working with engineers and clinicians to connect engineering methods with healthcare questions.\nEngineering education\nI design and investigate practical, active learning experiences that help students understand complex engineering concepts and apply them with confidence. My educational research and development includes virtual engineering laboratories, game-based learning and AI-supported interactive materials. I combine these approaches with authentic assessment, inclusive teaching and constructive feedback to support students’ participation and development."
+  },
+  {
+    "objectID": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a746f6f6c732d3234203e7d7d-technical-skills",
+    "href": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a746f6f6c732d3234203e7d7d-technical-skills",
+    "title": "Omar Elnaggar",
+    "section": " Technical Skills",
+    "text": "Technical Skills\nRobotics, sensing and embedded systems\nWearable sensor development, embedded C/C++, PCB design, microcontroller-based prototyping, sensor fusion, digital signal processing and feedback control. Experience with the Robot Operating System (ROS) and programmable logic controllers (PLCs).\nProgramming, machine learning and data analysis\nPython and MATLAB/Simulink for engineering computation, signal analysis and algorithm development; machine learning and deep learning using TensorFlow and PyTorch, alongside data visualisation and interpretable approaches to sensor-based analysis.\nHuman movement measurement and biomedical imaging\nOptical and wearable motion capture, including Vicon, OptiTrack, Qualisys and inertial sensors; force-plate and plantar-pressure measurements; ultrasound, MRI and biplanar X-ray imaging. Experimental data acquisition, preprocessing and validation against reference measurements.\nComputational biomechanics\nMusculoskeletal modelling and inverse kinematic and dynamic analysis with OpenSim; medical image segmentation with 3D Slicer and Avizo; subject-specific finite-element modelling and tissue analysis using Abaqus.\nEducational technology and interactive development\nVirtual engineering laboratories, game-based resources and AI-supported interactive learning materials. HTML/CSS, 3D modelling and animation, with experience using Moodle, Blackboard and Canvas to support teaching and learning."
+  },
+  {
+    "objectID": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a737461722d3234203e7d7d-interests",
+    "href": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a737461722d3234203e7d7d-interests",
+    "title": "Omar Elnaggar",
+    "section": " Interests",
+    "text": "Interests\n\nHuman-centred robotics and assistive technologies\nWearable technologies for health and mobility\nSleep posture, gait and healthy ageing\nInterpretable machine learning for sensing applications\nEngineering education and inclusive learning\nVirtual laboratories and game-based learning\nPatient and public involvement in research"
+  },
+  {
+    "objectID": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6d6f727461722d626f6172642d3234203e7d7d-education",
+    "href": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6d6f727461722d626f6172642d3234203e7d7d-education",
+    "title": "Omar Elnaggar",
+    "section": " Education",
+    "text": "Education\n\nMEd in Academic Practice | 2026 - present\nQueen Mary Academy\nQueen Mary University of London\nIn progress\nPostgraduate Certificate in Academic Practice | 2026\nQueen Mary Academy\nQueen Mary University of London\nPhD in Engineering | 2025\nDepartment of Mechanical, Materials and Aerospace Engineering\nUniversity of Liverpool\nThesis: intelligent wearable sensing for human sleep posture classification and temporal analysis.\nMEng in Mechatronic Engineering | 2019\nDepartment of Electrical and Electronic Engineering\nUniversity of Nottingham\nFirst-class honours."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Reflections",
+    "section": "",
+    "text": "What stayed with me from India\n\n\n\nFieldwork\n\nBiomechanics\n\nPersonal reflections\n\n\n\nMemories of fieldwork in Karnataka: generous welcomes, a school full of determination, and new questions about who my research is for.\n\n\n\n\n\nFriday, the 16th of October, 2026\n\n\nOmar Elnaggar\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "posts/2026-10-16-what-stayed-with-me-from-india/index.html",
+    "href": "posts/2026-10-16-what-stayed-with-me-from-india/index.html",
+    "title": "What stayed with me from India",
+    "section": "",
+    "text": "I went to India to study feet, footwear and ageing gait. What I keep coming back to is the way people welcomed us.\nIn January 2025, our biomechanics research took us to Bangalore and rural communities in Karnataka. We brought a portable experimental setup distributed across several bags and suitcases, found places to work, and collected unique and valuable field measurements from volunteers. That is the straightforward version of the trip. It leaves out almost everything that made it special.\n\n\n\nFieldwork in Karnataka, January 2025. Photograph: Dr Kristiaan (Kris) D’Août.\n\n\nAt one of the rural sites, we set up in a local school. People who had never met us welcomed us warmly, even when we didn’t share a language. There was something quite moving about that: arriving as a stranger and being made to feel welcome before you had much chance to explain yourself.\nDozens of people came to take part. They waited in a queue, sometimes for a long time, until we were ready for them. I remember concentrating on the feet I was scanning and noticing traces of mud nestled deep in the folds and grooves that years of hard work had etched into their skin. To me, these muddy traces tell their own story, honouring the lives and hard work of the people who stood before me.\nThat detail has stayed with me. We were measuring feet that carried people through lives we knew very little about. For a short time, those lives crossed with ours, and people gave us their time and trusted us to do our work.\nIt made the word “participant” feel rather small.\nThen, after all that, there was food.\nMembers of the community had cooked for us in a modest kitchen-like space without much lighting. I hadn’t expected it. They had already welcomed us, helped make the work possible, and waited patiently while we collected our measurements. Somewhere in the middle of that, someone had also decided that we should be fed.\nThe food tasted as warm as the welcome.\nI remember that feeling from so many of the rural places we visited: how difficult it seemed to leave without somebody offering us something home-cooked. I was conscious of the resources people were working with, which made their generosity especially touching. But what I remember most is how naturally they offered it. We were their guests, and they made sure we felt it.\n\n\n\nA view along the way in Karnataka.\n\n\nThe school gave me another memory I still return to. Kris stepped into a classroom and greeted the students. Daylight came through the window, and the pupils were extraordinarily attentive and disciplined, perhaps the most disciplined I have ever seen.\nI wouldn’t pretend that a brief visit told me everything about their education or their lives. Still, the seriousness with which those students approached learning made an impression on me, as did the commitment of the teachers working with them. Resources were limited. The desire to learn was very much there.\nIt made me think about my own education, and about how easily something that once felt like an opportunity can become an expectation. Access to equipment, a comfortable place to work, the simple assumption that the things you need will be available: I had grown used to a great deal.\nI came home more grateful for those things, and a little less comfortable taking them for granted.\nSome of the most personal moments happened at the end of the measurements. Elderly participants would sometimes tap my shoulder after I had finished working with their feet. I received those gestures as blessings, although I couldn’t be certain I understood their full meaning.\nI found them deeply touching. I had been focused on getting the measurements right, being careful, and completing the work. Then a small gesture would draw me out of that concentration and remind me of the person sharing that moment with me.\nI still think about it.\nHaving Dr Kristiaan (Kris) D’Août alongside me made the trip especially enjoyable. His network of collaborators in Bangalore helped make the work possible, and travelling with him brought another pleasure: the company of someone so open to exploring the world.\nI appreciated that mindset. Being curious about a place, making room for unfamiliar ways of doing things, and enjoying what you encounter along the way can change the whole experience of travelling. I feel fortunate to have shared this one with him, and grateful to the local collaborators whose relationships and work allowed us to be there.\nWe also happened to be in India during the Maha Kumbh Mela, an extraordinary spiritual gathering held in Prayagraj every twelve years, with the 2025 celebration considered especially significant because of a rare celestial alignment said to occur only once in 144 years. Hundreds of millions of pilgrim visits were recorded during the festival that year. I didn’t attend the gathering myself, but simply being in the country while something of such immense scale and spiritual significance was taking place added another sense of wonder to the trip. There was so much happening beyond the small part of India I was getting to know. It made me want to understand more, while reminding me how much I had yet to understand.\nSince coming home, I’ve found myself thinking more carefully about who my research is for.\nI still care about the technical questions: how feet work, how tissues respond to load, how we measure movement well. But I’m increasingly interested in where those questions lead, whose experiences help shape them, and who might eventually benefit from the answers.\nWorking in Karnataka made those questions personal. It gave me the privilege of doing biomechanics research with communities whose everyday lives may be far removed from the settings in which much of our evidence is collected. It also made me want to look more closely at whose lives our findings can reasonably speak for, and whose we still need to understand.\nI want that curiosity to influence the research I pursue: the people I work with, the places I go, and the practical value of what we develop together.\nI don’t yet have a neat answer to what giving back should look like. That is something I want to work out with communities and local collaborators, by listening to what matters to them. But I know I want it to continue to be part of a meaningful biomechanics research journey.\nWhen I think of that school now, I remember the equipment we brought and the measurements we collected. I also remember the queue, the classroom, the food, and the people who made room for us.\nThey had never met us before. They welcomed us anyway.\nI hope I carry some of that generosity into whatever comes next.\n\n← Back to Reflections\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Research toolkit\n\n\nFrom measurement to modelling\n\n\nFive complementary areas of my research experience.\n\n\n\n\n\n01\n\n\nMotion capture & analysis\n\n\nMeasuring movement and interpreting forces.\n\n\n\n\n\n\n\n02\n\n\nWearable sensing\n\n\nFrom circuit design to body-worn systems.\n\n\n\n\n\n\n\n03\n\n\nSignals & machine learning\n\n\nFinding patterns in posture and movement.\n\n\n\n\n\n\n\n04\n\n\nMusculoskeletal modelling\n\n\nConnecting movement with joint mechanics.\n\n\n\n\n\n\n\n05\n\n\nTissue modelling & analysis\n\n\nFrom medical images to mechanical behaviour.\n\n\n\n\n\n\n\nImages from my research portfolio. Select a panel to explore the detail.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n  \n\n\n\n\n  Educational technology\n\n\n\nEngineering education\n\nInteractive learning\n\nVirtual laboratories\n\n\n\n\nExploring how practical activities, virtual laboratories and interactive learning resources can help students understand engineering concepts, develop judgement and learn together.\n\n\n\n\n\nWednesday, the 14th of October, 2026\n\n\n\n\n\n\n\n\n  \n\n\n\n\n  Movement and tissue biomechanics\n\n\n\nHuman movement\n\nTissue biomechanics\n\nBiomedical imaging\n\n\n\n\nUsing motion capture, biomedical imaging and finite-element modelling to explore human locomotion and tissue behaviour.\n\n\n\n\n\nWednesday, the 14th of October, 2026\n\n\n\n\n\n\n\n\n  \n\n\n\n\n  Sleep wearables\n\n\n\nWearable sensing\n\nSleep posture\n\nMachine learning\n\n\n\n\nWearable sensing, biomechanics and interpretable learning to understand how we position ourselves and move during sleep.\n\n\n\n\n\nTuesday, the 13th of October, 2026\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html",
+    "href": "research/human-movement-tissue-biomechanics/index.html",
+    "title": "Movement and tissue biomechanics",
+    "section": "",
+    "text": "Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions. Source: Evolutionary Morphology and Biomechanics Group, University of Liverpool."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#what-draws-me-to-this-area",
+    "href": "research/human-movement-tissue-biomechanics/index.html#what-draws-me-to-this-area",
+    "title": "Movement and tissue biomechanics",
+    "section": "1 What draws me to this area",
+    "text": "1 What draws me to this area\nI am interested in how we move and the tissues that are involved in movement. Walking and balance bring this connection into focus: whole-body movement depends on the interaction of joints, muscles, soft tissues and the ground beneath our feet.\nMy research experience spans clinical human-motion analysis at Cambridge and foot and ankle biomechanics at Liverpool. Together, these experiences have shaped my interest in studying movement at different scales, from head and whole-body motion capture to the structure and mechanical behaviour of individual tissues. I bring sensing, biomedical imaging and computational modelling together to explore those connections."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#questions-that-interest-me",
+    "href": "research/human-movement-tissue-biomechanics/index.html#questions-that-interest-me",
+    "title": "Movement and tissue biomechanics",
+    "section": "2 Questions that interest me",
+    "text": "2 Questions that interest me\nSome questions that motivate my work include:\n\nWhat can changes in walking and balance tell us, and how can we measure them reliably outside the laboratory?\nHow do tissue structure, ageing and loading interact with the mechanics of movement?\nHow can imaging and personalised models help us interpret differences between people?\n\nThese questions offer starting points for collaboration across engineering, biomechanics and clinically motivated research."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#understanding-movement-in-a-clinical-context",
+    "href": "research/human-movement-tissue-biomechanics/index.html#understanding-movement-in-a-clinical-context",
+    "title": "Movement and tissue biomechanics",
+    "section": "3 Understanding movement in a clinical context",
+    "text": "3 Understanding movement in a clinical context\nAt the University of Cambridge, I worked on head and whole-body movement analysis with medical consultants and clinical scientists at Addenbrooke’s Hospital (Cambridge University Hospitals NHS Foundation Trust). I contributed to the development of data processing pipelines for ear-based wearable devices for monitoring walking and activities of daily living, and planned optical motion-capture setups that are clinically relevant in the context of balance and neurological disorders.\nA recurring question for me is what a measurement actually tells us: which features of movement are informative, how reliably they can be obtained, and how we can interpret them in relation to the person being assessed."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#looking-beneath-the-surface",
+    "href": "research/human-movement-tissue-biomechanics/index.html#looking-beneath-the-surface",
+    "title": "Movement and tissue biomechanics",
+    "section": "4 Looking beneath the surface",
+    "text": "4 Looking beneath the surface\nUltrasound (US), bi-planar X-ray and magnetic resonance imaging (MRI) are important parts of my experience in biomechanics research. They offer complementary views of tissue structure, deformation and bone motion, helping connect external measurements with what happens within the body.\nAt Liverpool, I developed equipment for heel-pad ultrasound imaging and plantar-surface strain measurements. I also constructed participant-specific finite-element models from segmented foot MRI scans and conducted bi-planar X-ray videography experiments with simultaneous force-plate measurements to inform hindfoot simulations.\nWhat draws me to this work is the possibility of linking anatomy with function. Ultrasound can reveal how the layers beneath the heel respond to loading; MRI provides anatomical information for personalised models; and bi-planar X-ray enables simultaneous investigation of motion and tissue behaviour. These approaches help explore mechanisms that are difficult to observe from the outside alone.\n\n\n\n\n\n\n\nUltrasound reveals the layered structure of the heel pad under load, including the skin, micro-chamber and macro-chamber layers above the calcaneus. From my ISB 2025 poster."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#contributions-from-my-work",
+    "href": "research/human-movement-tissue-biomechanics/index.html#contributions-from-my-work",
+    "title": "Movement and tissue biomechanics",
+    "section": "5 Contributions from my work",
+    "text": "5 Contributions from my work\nWorking with colleagues at Liverpool, I contributed to participant studies in the UK, India and Namibia, combining tissue measurements, gait biomechanics and biomedical imaging. Our work included examining age-related differences in the layers of the heel pad. I also investigated spatiotemporal gait parameters across the three populations using both laboratory and field gait measurements, and their correlations with age, weight and other confounding variables.\nI also explored a complementary question: can a quick measurement of surface hardness represent how heel tissues compress under load? Our conference work found that it did not reliably do so under the tested conditions. This illustrates a question I find especially important: when does a convenient measurement capture the behaviour we want to understand?\nAlongside experimental work, I contributed to a critical review of footwear and locomotor health across the life course, examining the evidence behind common footwear features and their interaction with the foot’s own mechanics."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#connecting-measurements-and-models",
+    "href": "research/human-movement-tissue-biomechanics/index.html#connecting-measurements-and-models",
+    "title": "Movement and tissue biomechanics",
+    "section": "6 Connecting measurements and models",
+    "text": "6 Connecting measurements and models\nMy approach combines wearable and optical sensing, force and pressure measurements, biomedical imaging, and musculoskeletal and finite-element modelling. I value their complementary perspectives: measurements describe movement and loading, imaging reveals anatomical structure, and models help investigate mechanical behaviour.\nAcross these activities, I aim to keep the analysis grounded in experimental evidence and attentive to variation between people.\n\n\n\n\n\n\n\nFrom MRI segmentation to tissue modelling: anatomical segmentation, a three-dimensional mesh, applied boundary conditions and a finite-element analysis example. Selected panel from my research-methods portfolio, showing the connection between medical imaging and computational biomechanics."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#possibilities-and-connections",
+    "href": "research/human-movement-tissue-biomechanics/index.html#possibilities-and-connections",
+    "title": "Movement and tissue biomechanics",
+    "section": "7 Possibilities and connections",
+    "text": "7 Possibilities and connections\nI would like to explore further connections between tissue biomechanics, whole-body movement and practical mobility assessment. Possible directions include combining wearable measurements with personalised models, studying variation across populations, and developing accessible ways to interpret biomechanical data.\nI welcome conversations with researchers, clinicians and prospective research students interested in human movement, tissue mechanics, biomedical imaging or computational modelling. If your interests connect with these themes or bring a different perspective, I would be happy to hear from you.\nGet in touch (elnaggar.omar at outlook dot com)."
+  },
+  {
+    "objectID": "research/human-movement-tissue-biomechanics/index.html#selected-work",
+    "href": "research/human-movement-tissue-biomechanics/index.html#selected-work",
+    "title": "Movement and tissue biomechanics",
+    "section": "8 Selected work",
+    "text": "8 Selected work\n\nAgeing and heel tissues: Impact of ageing on the heel pad: ultrasound imaging of the macrolayer, microlayer and skin — conference abstract, Footwear Science, 2025.\nInterpreting tissue measurements: Reliability of Shore Hardness as a Surrogate for Heel Pad Stiffness: A Correlative Study Using Ultrasound Imaging — ISB conference poster, 2025.\nFootwear and walking: Footwear Choice and Locomotor Health Throughout the Life Course: A Critical Review — Healthcare, 2025.\n\nFigure credits\n\nFeatured fieldwork figure: Evolutionary Morphology and Biomechanics Group, University of Liverpool, Figure 5.\nHeel-pad ultrasound: Elnaggar, Rowlatt and D’Août, ISB 2025 poster.\n\n\n← Back to Research"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Wearable sleep posture classification using one-shot learning of biomechanical signatures\n\n\nRecognising complex sleep postures from wearable joint measurements, with one-shot learning and an examination of the challenges beyond controlled experiments.\n\n\n\n\n\nSeptember 2026\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nWearable-derived joint kinematics for sleep posture analysis\n\n\nUsing wearable-derived wrist and ankle orientations to investigate sleep posture recognition when labelled examples are scarce.\n\n\n\n\n\nJune 2026\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nA generative AI-empowered framework for creating interactive learning materials without prior technical expertise\n\n\nA clear, lay-friendly pipeline for creating interactive learning materials with generative AI, demonstrated through examples from my engineering teaching practice.\n\n\n\n\n\nJuly 2025\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nThe biomechanics of ageing: Heel pad function throughout the life course\n\n\nSharing findings on heel-pad biomechanics and ageing with a patient and public involvement panel, whose perspectives helped shape future research directions.\n\n\n\n\n\nMarch 2025\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nHeel fat pad morphology and biomechanics: Ageing, footwear and anthropology\n\n\nFindings from a large UK–India dataset exploring heel-pad structure, tissue mechanics and gait in relation to ageing and footwear.\n\n\n\n\n\nFebruary 2025\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nSensors and Perception in Robotics\n\n\nA guest lecture on robotic sensors, actuators, measurement uncertainty and the foundations of sensor fusion and perception.\n\n\n\n\n\nFebruary 2024\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nSensors and Perception in Robotics\n\n\nAn introduction to how robots sense and act, from sensor and actuator choices to reasoning with uncertain measurements.\n\n\n\n\n\nFebruary 2023\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nGeneralised Joint Kinematic Analysis and 3D Visualisation: A Human Wrist Case Study\n\n\nExploring a three-dimensional view of wrist orientation through synthetic motion data, wearable sensors and nonlinear dimensionality reduction.\n\n\n\n\n\nSeptember 2022\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nDesign and Development of Game-based Learning for Virtual Engineering Laboratories: Two Case Studies\n\n\nTwo engineering laboratory case studies exploring how game-based design can serve subject understanding and learning outcomes.\n\n\n\n\n\nJuly 2022\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nPerception of Sleeping Poses Using Extremity Limb Orientations\n\n\nInvestigating extremity-limb orientation as a wearable sensing approach to distinguishing sleeping poses.\n\n\n\n\n\nSeptember 2021\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nQuantification of Knowledge Exchange within Classrooms: An AI-based Approach\n\n\nMaking peer learning visible through an engineering coursework handover, student surveys and AI-based visualisation.\n\n\n\n\n\nJuly 2021\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nIn-Bed Human Pose Classification Using Sparse Inertial Signals\n\n\nA simulation-based study of twelve sleeping poses, using synthetic inertial data and machine learning to address scarce labelled examples.\n\n\n\n\n\nDecember 2020\n\n\nOmar Elnaggar\n\n\n\n\n\n\n\n\n\n\n\n\nWearable Sensing for Non-Invasive Human Pose Recognition During Sleep\n\n\nIntroducing the motivation and computational foundations for wearable recognition of human posture during sleep.\n\n\n\n\n\nDecember 2020\n\n\nOmar Elnaggar\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "talks/2020-12-17-ai-in-bed-pose-classification/index.html",
+    "href": "talks/2020-12-17-ai-in-bed-pose-classification/index.html",
+    "title": "In-Bed Human Pose Classification Using Sparse Inertial Signals",
+    "section": "",
+    "text": "Work with Frans Coenen and Paolo Paoletti.\nRelated research: Sleep wearables.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2021-09-biomedeng-sleeping-poses/index.html",
+    "href": "talks/2021-09-biomedeng-sleeping-poses/index.html",
+    "title": "Perception of Sleeping Poses Using Extremity Limb Orientations",
+    "section": "",
+    "text": "Work with Frans Coenen, Andrew Hopkinson and Paolo Paoletti.\nConference dates: 6–7 September 2021.\nRelated research: Sleep wearables.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2022-09-biomedeng-wrist-kinematics/index.html",
+    "href": "talks/2022-09-biomedeng-wrist-kinematics/index.html",
+    "title": "Generalised Joint Kinematic Analysis and 3D Visualisation: A Human Wrist Case Study",
+    "section": "",
+    "text": "Work with Frans Coenen, Andrew Hopkinson and Paolo Paoletti.\nConference dates: 8–9 September 2022.\nRelated research: Movement and tissue biomechanics.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2024-02-19-sensors-perception-robotics/index.html",
+    "href": "talks/2024-02-19-sensors-perception-robotics/index.html",
+    "title": "Sensors and Perception in Robotics",
+    "section": "",
+    "text": "Related research: Research.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2025-03-13-biomechanics-ageing-ppi/index.html",
+    "href": "talks/2025-03-13-biomechanics-ageing-ppi/index.html",
+    "title": "The biomechanics of ageing: Heel pad function throughout the life course",
+    "section": "",
+    "text": "Joint presentation with Kristiaan D’Août.\nRelated research: Movement and tissue biomechanics.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks/2026-06-26-mobiuk-sleep-posture/index.html",
+    "href": "talks/2026-06-26-mobiuk-sleep-posture/index.html",
+    "title": "Wearable-derived joint kinematics for sleep posture analysis",
+    "section": "",
+    "text": "Work with Roselina Arelhi, Frans Coenen, Andrew Hopkinson and Paolo Paoletti.\nSession 4: Wearables, Clinical Monitoring, and Sensing Infrastructure; 15:55–16:55, Lecture Theatre 1.\nRelated research: Sleep wearables.\n\n← Back to Talks\n\n\n\n\n Back to top"
+  }
+]

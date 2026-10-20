@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Omar Elnaggar — Research</title>
+<link>https://omarelnaggar007.github.io/research.html</link>
+<atom:link href="https://omarelnaggar007.github.io/research.xml" rel="self" type="application/rss+xml"/>
+<description>Updates to Omar Elnaggar’s research area pages.</description>
+<language>en-gb</language>
+<image>
+<url>https://omarelnaggar007.github.io/assets/images/omar-elnaggar-social.png</url>
+<title>Omar Elnaggar — Research</title>
+<link>https://omarelnaggar007.github.io/research.html</link>
+</image>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Tue, 13 Oct 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Educational technology</title>
+  <dc:creator>Omar Elnaggar</dc:creator>
+  <link>https://omarelnaggar007.github.io/research/engineering-education/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/engineering-education/virtual-laboratory.lossless.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A beam-deflection experiment from my virtual engineering laboratory work with The University of Sheffield. The gamified environment brings apparatus, measurements and engineering concepts into a shared space for exploration."><img src="https://omarelnaggar007.github.io/research/assets/images/engineering-education/virtual-laboratory.lossless.webp" class="img-featured img-fluid quarto-figure quarto-figure-center figure-img" alt="A beam-deflection experiment in a three-dimensional virtual engineering laboratory, with a loaded beam, dial gauge and explanatory board." width="700"></a></p>
+</figure>
+</div>
+<figcaption>A beam-deflection experiment from my virtual engineering laboratory work with The University of Sheffield. The gamified environment brings apparatus, measurements and engineering concepts into a shared space for exploration.</figcaption>
+</figure>
+</div>
+<section id="what-draws-me-to-this-area" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-draws-me-to-this-area"><span class="header-section-number">1</span> What draws me to this area</h2>
+<p>I am interested in how students develop an understanding of engineering: how they connect theory with the behaviour of real systems, learn through experimentation, and develop confidence in their own judgement. My work explores the design of assessments and digital resources to support that process.</p>
+<p>My experience teaching robotics, mechatronics, control and engineering computing has made these connections especially important to me. An equation becomes more meaningful when students can change a parameter, observe what happens and explain why. Equally, building a working system creates opportunities to question assumptions, interpret imperfect measurements and learn from unexpected behaviour.</p>
+<p>I want to create learning experiences that give students room to investigate, discuss and make decisions, while helping educators quantify, understand and support that learning.</p>
+</section>
+<section id="questions-that-interest-me" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="questions-that-interest-me"><span class="header-section-number">2</span> Questions that interest me</h2>
+<p>Some questions that motivate my work include:</p>
+<ul>
+<li>How can interactive activities help students ground engineering theory in practice?</li>
+<li>How can virtual and physical laboratories complement one another?</li>
+<li>How can we quantify and interpret within-class knowledge exchange in collaborative activities?</li>
+<li>How can educators create useful, accessible interactive teaching materials?</li>
+</ul>
+<p>These are starting points for exploration. Different engineering subjects, student backgrounds and teaching contexts bring further questions of their own.</p>
+</section>
+<section id="learning-through-experimentation" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="learning-through-experimentation"><span class="header-section-number">3</span> Learning through experimentation</h2>
+<p>I am interested in practical learning that gives students meaningful choices: forming a prediction, testing an idea, comparing observations and revising an explanation. Physical laboratories, design-build activities and virtual experiments offer different opportunities for this kind of exploration.</p>
+<p>Working with collaborators, I have developed game-based virtual engineering laboratories, including work presented through mechanical and computer engineering case studies at the <a href="../../talks/2022-07-05-advance-he-virtual-laboratories/index.html" class="no-external">Advance HE Teaching and Learning Conference in 2022</a>. I also served as technology lead and co-investigator on the <em>Studentainment</em> virtual-laboratory project.</p>
+<p>For me, the interesting challenge is connecting the activity with what students need to understand. I would like to explore how virtual environments can support preparation, repeated experimentation and reflection alongside the practical experience of working with physical equipment.</p>
+</section>
+<section id="making-engineering-concepts-interactive" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="making-engineering-concepts-interactive"><span class="header-section-number">4</span> Making engineering concepts interactive</h2>
+<p>Interactive resources can let students explore relationships that are difficult to communicate through a static diagram alone. In my teaching materials, I use controls and visual feedback to invite students to change a system’s parameters and examine its response. Robot control provides one example of this approach.</p>
+<p>With Roselina Arelhi, I presented a <a href="../../talks/2025-07-02-advance-he-interactive-learning/index.html" class="no-external">framework for creating interactive learning materials with generative AI at Advance HE in 2025</a>. This work explores how educators can develop and customise resources without extensive technical expertise.</p>
+<p>I am interested in making this process more approachable while keeping educators’ judgement central: checking technical accuracy, choosing useful interactions and considering how different students will access and use the material.</p>
+<details>
+<summary>
+Watch an example: exploring robot control
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/engineering-education/interactive-robot-pid-control.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="A recorded demonstration of my interactive robot-control teaching material. It shows parameter controls alongside visual feedback about system behaviour."><img src="https://omarelnaggar007.github.io/research/assets/images/engineering-education/interactive-robot-pid-control.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Animated recording of a robot-control learning resource with parameter sliders, an animated robot arm and numerical response values." width="400"></a></p>
+</figure>
+</div>
+<figcaption>A recorded demonstration of my interactive robot-control teaching material. It shows parameter controls alongside visual feedback about system behaviour.</figcaption>
+</figure>
+</div>
+</details>
+</section>
+<section id="understanding-learning-and-collaboration" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="understanding-learning-and-collaboration"><span class="header-section-number">5</span> Understanding learning and collaboration</h2>
+<p>Engineering work depends on explaining ideas, interpreting someone else’s work and contributing to shared decisions. I am interested in learning activities that make those processes visible, and in evidence that helps educators understand students’ developing knowledge.</p>
+<p>In our <a href="../../talks/2021-07-ece-knowledge-exchange/index.html" class="no-external">2021 classroom knowledge-exchange study</a>, Roselina Arelhi and I explored a group-coursework framework involving a handover between teams. We combined survey information with AI-based visualisation to investigate students’ knowledge alongside conventional assessment measures.</p>
+<p>This experience informs my interest in authentic assessment, constructive feedback and collaborative learning. More recently, I have contributed to a departmental, evidence-led demonstrator-training development at Queen Mary’s School of Engineering and Materials Science. Across these activities, I want to understand both the learning experience and the support students need to participate effectively.</p>
+</section>
+<section id="possibilities-and-connections" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="possibilities-and-connections"><span class="header-section-number">6</span> Possibilities and connections</h2>
+<p>I would like to explore further connections between practical engineering education, interactive resources and the evaluation of learning. Possible directions include linking virtual and physical experiments, developing resources with students and educators, and examining how different learners engage with collaborative activities.</p>
+<p>I welcome conversations with engineering educators, education researchers, developers and prospective research students. If you are interested in laboratory learning, interactive engineering concepts, knowledge exchange or thoughtful uses of AI in education, I would be pleased to hear from you.</p>
+<p><script type="text/javascript">
+<!--
+h='&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#108;&#110;&#x61;&#x67;&#x67;&#x61;&#114;&#46;&#x6f;&#x6d;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x47;&#x65;&#116;&#32;&#x69;&#110;&#32;&#116;&#x6f;&#x75;&#x63;&#104;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>Get in touch (elnaggar.omar at outlook dot com)</noscript>.</p>
+</section>
+<section id="selected-work" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="selected-work"><span class="header-section-number">7</span> Selected work</h2>
+<ul>
+<li><strong>Virtual engineering laboratories:</strong> <a href="https://www.advance-he.ac.uk/sites/default/files/2022-06/Advance-HE-Teaching-and-Learning-Conference-2022-Abstracts-Day-One-5-July-2022-3006.pdf">Design and development of game-based learning for virtual engineering laboratories: Two case studies</a>, Advance HE conference presentation and abstract, 2022.</li>
+<li><strong>Creating interactive resources:</strong> <a href="https://www.advance-he.ac.uk/sites/default/files/2025-06/Day%202%20-%20Abstracts%20T%26L%20Conference%202025_7.pdf">A generative AI-empowered framework for creating interactive learning materials without prior technical expertise</a>, Advance HE conference presentation and abstract, 2025.</li>
+<li><strong>Learning through knowledge exchange:</strong> <a href="https://doi.org/10.22492/issn.2188-1162.2021.17">Quantification of Knowledge Exchange within Classrooms: An AI-based Approach</a>, <em>The European Conference on Education: Official Conference Proceedings</em>, 2021.</li>
+</ul>
+<div class="text-center mt-4">
+<p><a href="../../research.html" class="no-external">← Back to Research</a></p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Engineering education</category>
+  <category>Interactive learning</category>
+  <category>Virtual laboratories</category>
+  <guid>https://omarelnaggar007.github.io/research/engineering-education/</guid>
+  <pubDate>Tue, 13 Oct 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://omarelnaggar007.github.io/research/assets/images/engineering-education/virtual-laboratory.thumbnail.webp" medium="image" type="image/webp"/>
+</item>
+<item>
+  <title>Movement and tissue biomechanics</title>
+  <dc:creator>Omar Elnaggar</dc:creator>
+  <link>https://omarelnaggar007.github.io/research/human-movement-tissue-biomechanics/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/biomechanics/liverpool-fieldwork.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions. Source: Evolutionary Morphology and Biomechanics Group, University of Liverpool."><img src="https://omarelnaggar007.github.io/research/assets/images/biomechanics/liverpool-fieldwork.svg" class="img-featured img-fluid quarto-figure quarto-figure-center figure-img" alt="Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions." width="600"></a></p>
+</figure>
+</div>
+<figcaption>Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions. Source: Evolutionary Morphology and Biomechanics Group, University of Liverpool.</figcaption>
+</figure>
+</div>
+<section id="what-draws-me-to-this-area" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-draws-me-to-this-area"><span class="header-section-number">1</span> What draws me to this area</h2>
+<p>I am interested in how we move and the tissues that are involved in movement. Walking and balance bring this connection into focus: whole-body movement depends on the interaction of joints, muscles, soft tissues and the ground beneath our feet.</p>
+<p>My research experience spans clinical human-motion analysis at Cambridge and foot and ankle biomechanics at Liverpool. Together, these experiences have shaped my interest in studying movement at different scales, from head and whole-body motion capture to the structure and mechanical behaviour of individual tissues. I bring sensing, biomedical imaging and computational modelling together to explore those connections.</p>
+</section>
+<section id="questions-that-interest-me" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="questions-that-interest-me"><span class="header-section-number">2</span> Questions that interest me</h2>
+<p>Some questions that motivate my work include:</p>
+<ul>
+<li>What can changes in walking and balance tell us, and how can we measure them reliably outside the laboratory?</li>
+<li>How do tissue structure, ageing and loading interact with the mechanics of movement?</li>
+<li>How can imaging and personalised models help us interpret differences between people?</li>
+</ul>
+<p>These questions offer starting points for collaboration across engineering, biomechanics and clinically motivated research.</p>
+</section>
+<section id="understanding-movement-in-a-clinical-context" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="understanding-movement-in-a-clinical-context"><span class="header-section-number">3</span> Understanding movement in a clinical context</h2>
+<p>At the University of Cambridge, I worked on head and whole-body movement analysis with medical consultants and clinical scientists at Addenbrooke’s Hospital (Cambridge University Hospitals NHS Foundation Trust). I contributed to the development of data processing pipelines for ear-based wearable devices for monitoring walking and activities of daily living, and planned optical motion-capture setups that are clinically relevant in the context of balance and neurological disorders.</p>
+<p>A recurring question for me is what a measurement actually tells us: which features of movement are informative, how reliably they can be obtained, and how we can interpret them in relation to the person being assessed.</p>
+</section>
+<section id="looking-beneath-the-surface" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="looking-beneath-the-surface"><span class="header-section-number">4</span> Looking beneath the surface</h2>
+<p><strong>Ultrasound (US), bi-planar X-ray and magnetic resonance imaging (MRI)</strong> are important parts of my experience in biomechanics research. They offer complementary views of tissue structure, deformation and bone motion, helping connect external measurements with what happens within the body.</p>
+<p>At Liverpool, I developed equipment for heel-pad ultrasound imaging and plantar-surface strain measurements. I also constructed participant-specific finite-element models from segmented foot MRI scans and conducted bi-planar X-ray videography experiments with simultaneous force-plate measurements to inform hindfoot simulations.</p>
+<p>What draws me to this work is the possibility of linking anatomy with function. Ultrasound can reveal how the layers beneath the heel respond to loading; MRI provides anatomical information for personalised models; and bi-planar X-ray enables simultaneous investigation of motion and tissue behaviour. These approaches help explore mechanisms that are difficult to observe from the outside alone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/biomechanics/heel-pad-ultrasound.lossless.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Ultrasound reveals the layered structure of the heel pad under load, including the skin, micro-chamber and macro-chamber layers above the calcaneus. From my ISB 2025 poster."><img src="https://omarelnaggar007.github.io/research/assets/images/biomechanics/heel-pad-ultrasound.lossless.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Labelled ultrasound image showing heel-pad tissue layers and the calcaneus." width="600"></a></p>
+</figure>
+</div>
+<figcaption>Ultrasound reveals the layered structure of the heel pad under load, including the skin, micro-chamber and macro-chamber layers above the calcaneus. From my ISB 2025 poster.</figcaption>
+</figure>
+</div>
+</section>
+<section id="contributions-from-my-work" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="contributions-from-my-work"><span class="header-section-number">5</span> Contributions from my work</h2>
+<p>Working with colleagues at Liverpool, I contributed to participant studies in the UK, India and Namibia, combining tissue measurements, gait biomechanics and biomedical imaging. Our work included <a href="https://doi.org/10.1080/19424280.2025.2489692">examining age-related differences in the layers of the heel pad</a>. I also investigated spatiotemporal gait parameters across the three populations using both laboratory and field gait measurements, and their correlations with age, weight and other confounding variables.</p>
+<p>I also explored a complementary question: can a quick measurement of surface hardness represent how heel tissues compress under load? Our <a href="../../assets/documents/biomechanics/heel-pad-isb-poster-2025.pdf">conference work</a> found that it did not reliably do so under the tested conditions. This illustrates a question I find especially important: when does a convenient measurement capture the behaviour we want to understand?</p>
+<p>Alongside experimental work, I contributed to a <a href="https://doi.org/10.3390/healthcare13050527">critical review of footwear and locomotor health across the life course</a>, examining the evidence behind common footwear features and their interaction with the foot’s own mechanics.</p>
+</section>
+<section id="connecting-measurements-and-models" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="connecting-measurements-and-models"><span class="header-section-number">6</span> Connecting measurements and models</h2>
+<p>My approach combines wearable and optical sensing, force and pressure measurements, biomedical imaging, and musculoskeletal and finite-element modelling. I value their complementary perspectives: measurements describe movement and loading, imaging reveals anatomical structure, and models help investigate mechanical behaviour.</p>
+<p>Across these activities, I aim to keep the analysis grounded in experimental evidence and attentive to variation between people.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/biomechanics/mri-tissue-modelling.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="From MRI segmentation to tissue modelling: anatomical segmentation, a three-dimensional mesh, applied boundary conditions and a finite-element analysis example. Selected panel from my research-methods portfolio, showing the connection between medical imaging and computational biomechanics."><img src="https://omarelnaggar007.github.io/research/assets/images/biomechanics/mri-tissue-modelling.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Selected computational biomechanics panel showing foot MRI segmentation, a tissue mesh, loading conditions and finite-element analysis." width="650"></a></p>
+</figure>
+</div>
+<figcaption>From MRI segmentation to tissue modelling: anatomical segmentation, a three-dimensional mesh, applied boundary conditions and a finite-element analysis example. Selected panel from my research-methods portfolio, showing the connection between medical imaging and computational biomechanics.</figcaption>
+</figure>
+</div>
+</section>
+<section id="possibilities-and-connections" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="possibilities-and-connections"><span class="header-section-number">7</span> Possibilities and connections</h2>
+<p>I would like to explore further connections between tissue biomechanics, whole-body movement and practical mobility assessment. Possible directions include combining wearable measurements with personalised models, studying variation across populations, and developing accessible ways to interpret biomechanical data.</p>
+<p>I welcome conversations with researchers, clinicians and prospective research students interested in human movement, tissue mechanics, biomedical imaging or computational modelling. If your interests connect with these themes or bring a different perspective, I would be happy to hear from you.</p>
+<p><script type="text/javascript">
+<!--
+h='&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#108;&#110;&#x61;&#x67;&#x67;&#x61;&#114;&#46;&#x6f;&#x6d;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x47;&#x65;&#116;&#32;&#x69;&#110;&#32;&#116;&#x6f;&#x75;&#x63;&#104;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>Get in touch (elnaggar.omar at outlook dot com)</noscript>.</p>
+</section>
+<section id="selected-work" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="selected-work"><span class="header-section-number">8</span> Selected work</h2>
+<ul>
+<li><strong>Ageing and heel tissues:</strong> <a href="https://doi.org/10.1080/19424280.2025.2489692">Impact of ageing on the heel pad: ultrasound imaging of the macrolayer, microlayer and skin</a> — conference abstract, <em>Footwear Science</em>, 2025.</li>
+<li><strong>Interpreting tissue measurements:</strong> <a href="../../assets/documents/biomechanics/heel-pad-isb-poster-2025.pdf">Reliability of Shore Hardness as a Surrogate for Heel Pad Stiffness: A Correlative Study Using Ultrasound Imaging</a> — ISB conference poster, 2025.</li>
+<li><strong>Footwear and walking:</strong> <a href="https://doi.org/10.3390/healthcare13050527">Footwear Choice and Locomotor Health Throughout the Life Course: A Critical Review</a> — <em>Healthcare</em>, 2025.</li>
+</ul>
+<p><strong>Figure credits</strong></p>
+<ul>
+<li>Featured fieldwork figure: <a href="https://www.liverpool.ac.uk/life-course-and-medical-sciences/research/groups/evolutionary-morphology-and-biomechanics-group/">Evolutionary Morphology and Biomechanics Group, University of Liverpool, Figure 5</a>.</li>
+<li>Heel-pad ultrasound: <a href="../../assets/documents/biomechanics/heel-pad-isb-poster-2025.pdf">Elnaggar, Rowlatt and D’Août, ISB 2025 poster</a>.</li>
+</ul>
+<div class="text-center mt-4">
+<p><a href="../../research.html" class="no-external">← Back to Research</a></p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Human movement</category>
+  <category>Tissue biomechanics</category>
+  <category>Biomedical imaging</category>
+  <guid>https://omarelnaggar007.github.io/research/human-movement-tissue-biomechanics/</guid>
+  <pubDate>Tue, 13 Oct 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://omarelnaggar007.github.io/research/assets/images/biomechanics/liverpool-fieldwork.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Sleep wearables</title>
+  <dc:creator>Omar Elnaggar</dc:creator>
+  <link>https://omarelnaggar007.github.io/research/sleep-posture/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/sleep-posture-sensing.lossless.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Sleep posture analysis with intelligent wearable sensing."><img src="https://omarelnaggar007.github.io/research/assets/images/sleep-posture-sensing.lossless.webp" class="img-featured img-fluid quarto-figure quarto-figure-center figure-img" alt="Sleep posture analysis with intelligent wearable sensing." width="600"></a></p>
+</figure>
+</div>
+<figcaption>Sleep posture analysis with intelligent wearable sensing.</figcaption>
+</figure>
+</div>
+<section id="what-draws-me-to-this-area" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-draws-me-to-this-area"><span class="header-section-number">1</span> What draws me to this area</h2>
+<p>I am interested in how wearable technologies can help us understand body posture and movement during sleep. This area brings together several things that motivate my research: developing sensing systems, understanding human biomechanics, and turning measurements into information that clinicians and lay users can interpret and act upon.</p>
+<p>Beyond recognising an individual posture, I am interested in the patterns that emerge over time: how positions change, how long they are maintained, and what we can learn from the relationship between in-bed posture/movement and other physiological phenomena.</p>
+</section>
+<section id="questions-that-interest-me" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="questions-that-interest-me"><span class="header-section-number">2</span> Questions that interest me</h2>
+<p>Some of the questions I explore include:</p>
+<ul>
+<li>How much can we learn about body posture from a finite set of biomechanical and sensor measurements?</li>
+<li>How can we recognise different postures when collecting large labelled datasets is difficult?</li>
+<li>How can we describe posture changes and periods of inactivity in an understandable way?</li>
+</ul>
+<p>These questions also open opportunities to connect wearable sensing with wider interests in biomechanics, <a href="../../research/human-movement-tissue-biomechanics/index.html" class="no-external">human movement</a> and healthcare engineering.</p>
+</section>
+<section id="bringing-sensing-and-interpretation-together" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="bringing-sensing-and-interpretation-together"><span class="header-section-number">3</span> Bringing sensing and interpretation together</h2>
+<p>My work combines bespoke wearable sensor development, measurements of joint orientation and movement, and computational methods for recognising patterns. I am particularly interested in representations that connect sensor measurements to the biophysical quantities they describe.</p>
+<p>Rather than treating sensing and analysis as separate tasks, I explore how the choice of measurements and the methods used to interpret them can work together to provide useful information about posture and movement.</p>
+</section>
+<section id="contributions-from-my-work" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="contributions-from-my-work"><span class="header-section-number">4</span> Contributions from my work</h2>
+<p>Working with collaborators, I have explored how complex sleep postures can be recognised from joint-angle information using very limited labelled training data. Our one-shot learning framework examined twelve non-standard postures through computer-generated data and a human-participant pilot study, bringing together wearable sensing, sensor fusion and kinematic data augmentation. <a href="https://doi.org/10.1016/j.inffus.2023.02.003">Read the posture-learning paper</a>.</p>
+<p>A complementary strand of work examines <strong>when posture changes occur and how periods of postural inactivity can be described</strong>. We developed an interpretable framework using wrist kinematics, evaluated in a controlled study with five healthy participants during simulated sleep. This connects posture recognition with an understanding of movement over time. <a href="https://doi.org/10.1038/s41598-023-44567-9">Read the posture-change and inactivity paper</a>.</p>
+<p>Together, these studies contribute methods for analysing sleep-related posture and movement, while providing a foundation for further investigation in varied contexts.</p>
+</section>
+<section id="possibilities-and-connections" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="possibilities-and-connections"><span class="header-section-number">5</span> Possibilities and connections</h2>
+<p>I am interested in extending this work towards sensing approaches that are practical, adaptable and informative beyond controlled experiments. Possible directions include understanding differences between individuals, learning with limited examples, and exploring how movement information could support broader biomechanics and healthcare research.</p>
+<p>I would welcome conversations with researchers, clinicians and prospective research students who share these interests—or who bring complementary ideas. There is room for contributions spanning sensor development, intelligent algorithms, experimental biomechanics and the interpretation of human movement.</p>
+<p><script type="text/javascript">
+<!--
+h='&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#108;&#110;&#x61;&#x67;&#x67;&#x61;&#114;&#46;&#x6f;&#x6d;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x47;&#x65;&#116;&#32;&#x69;&#110;&#32;&#116;&#x6f;&#x75;&#x63;&#104;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>Get in touch (elnaggar.omar at outlook dot com)</noscript>.</p>
+</section>
+<section id="selected-work" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="selected-work"><span class="header-section-number">6</span> Selected work</h2>
+<ul>
+<li><strong>Posture recognition with limited examples:</strong> <a href="https://doi.org/10.1016/j.inffus.2023.02.003">One-shot learning using extremity joint kinematics</a> — <em>Information Fusion</em>, 2023.</li>
+<li><strong>Movement over time:</strong> <a href="https://doi.org/10.1038/s41598-023-44567-9">Posture-change detection and inactivity segmentation using wrist kinematics</a> — <em>Scientific Reports</em>, 2023.</li>
+<li><strong>A broader perspective:</strong> <a href="https://doi.org/10.1016/B978-0-443-22206-1.00004-8">Sleep posture analysis: clinical, sensing and intelligent perception perspectives</a> — book chapter, 2025.</li>
+</ul>
+<div class="text-center mt-4">
+<p><a href="../../research.html" class="no-external">← Back to Research</a></p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Wearable sensing</category>
+  <category>Sleep posture</category>
+  <category>Machine learning</category>
+  <guid>https://omarelnaggar007.github.io/research/sleep-posture/</guid>
+  <pubDate>Mon, 12 Oct 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://omarelnaggar007.github.io/research/assets/images/sleep-posture-sensing.lossless.webp" medium="image" type="image/webp"/>
+</item>
+</channel>
+</rss>

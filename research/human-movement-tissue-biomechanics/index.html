@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Omar Elnaggar">
+<meta name="description" content="Using motion capture, biomedical imaging and finite-element modelling to explore human locomotion and tissue behaviour.">
+
+<title>Movement and tissue biomechanics – Omar Elnaggar</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//assets/images/omar-elnaggar-favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de1215aa7a72655401e1ea8563358ae8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90b9a2f02bdf50f5114de277d3ddac9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de1215aa7a72655401e1ea8563358ae8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-34ea4d3771acf330b1837a7c7b146956.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ae7da8443eaec1b09e6476fbb3371c76.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-34ea4d3771acf330b1837a7c7b146956.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/code-window-0.1.0/style.css" rel="stylesheet">
+<script>document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll("pre.cw-auto").forEach(function(pre){
+    var fn=pre.closest("[data-filename]");
+    if(!fn)return;
+    var name=fn.getAttribute("data-filename");
+    if(!name)return;
+    var scaffold=pre.closest(".code-copy-outer-scaffold")||pre.closest(".sourceCode");
+    if(!scaffold)return;
+    var w=document.createElement("div");
+    w.className="code-with-filename code-window-auto";
+    var tb=document.createElement("div");
+    tb.className="code-with-filename-file";
+    var tp=document.createElement("pre");
+    var ts=document.createElement("strong");
+    ts.textContent=name;
+    tp.appendChild(ts);tb.appendChild(tp);
+    scaffold.parentNode.insertBefore(w,scaffold);
+    w.appendChild(tb);w.appendChild(scaffold);
+    pre.classList.remove("cw-auto");
+  });
+  document.querySelectorAll(".code-with-filename").forEach(function(el){
+    if(/\bcode-window-(macos|windows|default)\b/.test(el.className))return;
+    var c=el.querySelector('[class*="cw-style-"]');
+    if(c){var m=c.className.match(/cw-style-(\w+)/);if(m){el.classList.add("code-window-"+m[1]);c.classList.remove(m[0]);return;}}
+    el.classList.add("code-window-macos");
+  });
+});</script>
+<script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HDT10H2FQL"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HDT10H2FQL', { 'anonymize_ip': true});
+</script>
+
+
+<meta property="og:title" content="Movement and tissue biomechanics – Omar Elnaggar">
+<meta property="og:description" content="Using motion capture, biomedical imaging and finite-element modelling to explore human locomotion and tissue behaviour.">
+<meta property="og:image" content="https://omarelnaggar007.github.io/research/assets/images/biomechanics/liverpool-fieldwork-social.png">
+<meta property="og:site_name" content="Omar Elnaggar">
+<meta property="og:image:height" content="1020">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:alt" content="Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions.">
+<meta name="twitter:title" content="Movement and tissue biomechanics – Omar Elnaggar">
+<meta name="twitter:description" content="Using motion capture, biomedical imaging and finite-element modelling to explore human locomotion and tissue behaviour.">
+<meta name="twitter:image" content="https://omarelnaggar007.github.io/research/assets/images/biomechanics/liverpool-fieldwork-social.png">
+<meta name="twitter:image-height" content="1020">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:image:alt" content="Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://omarelnaggar007.github.io/research/human-movement-tissue-biomechanics/">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/omar-elnaggar-wordmark-light.svg" alt="Omar Elnaggar" class="navbar-logo light-content">
+    <img src="../../assets/images/omar-elnaggar-wordmark-dark.svg" alt="Omar Elnaggar" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Omar Elnaggar</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Reflections</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:elnaggar.omar@outlook.com"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa7-solid:envelope" aria-label="Email Omar Elnaggar" title="Email Omar Elnaggar"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/omar-elnaggar/" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa7-brands:linkedin" aria-label="Omar Elnaggar on LinkedIn" title="Omar Elnaggar on LinkedIn"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/omarelnaggar007" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Omar Elnaggar on GitHub" title="Omar Elnaggar on GitHub"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-7417-6023" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa7-brands:orcid" aria-label="Omar Elnaggar on ORCID" title="Omar Elnaggar on ORCID"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=WMiYlPEAAAAJ" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="simple-icons:googlescholar" aria-label="Omar Elnaggar on Google Scholar" title="Omar Elnaggar on Google Scholar"></iconify-icon></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Movement and tissue biomechanics</h1>
+                  <div>
+        <div class="description">
+          Using motion capture, biomedical imaging and finite-element modelling to explore human locomotion and tissue behaviour.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Human movement</div>
+                <div class="quarto-category">Tissue biomechanics</div>
+                <div class="quarto-category">Biomedical imaging</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Omar Elnaggar <a href="https://orcid.org/0000-0001-7417-6023" class="quarto-title-author-orcid" aria-label="ORCID profile for Omar Elnaggar"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Updated</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Wednesday, the 14th of October, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-draws-me-to-this-area" id="toc-what-draws-me-to-this-area" class="nav-link active" data-scroll-target="#what-draws-me-to-this-area"><span class="header-section-number">1</span> What draws me to this area</a></li>
+  <li><a href="#questions-that-interest-me" id="toc-questions-that-interest-me" class="nav-link" data-scroll-target="#questions-that-interest-me"><span class="header-section-number">2</span> Questions that interest me</a></li>
+  <li><a href="#understanding-movement-in-a-clinical-context" id="toc-understanding-movement-in-a-clinical-context" class="nav-link" data-scroll-target="#understanding-movement-in-a-clinical-context"><span class="header-section-number">3</span> Understanding movement in a clinical context</a></li>
+  <li><a href="#looking-beneath-the-surface" id="toc-looking-beneath-the-surface" class="nav-link" data-scroll-target="#looking-beneath-the-surface"><span class="header-section-number">4</span> Looking beneath the surface</a></li>
+  <li><a href="#contributions-from-my-work" id="toc-contributions-from-my-work" class="nav-link" data-scroll-target="#contributions-from-my-work"><span class="header-section-number">5</span> Contributions from my work</a></li>
+  <li><a href="#connecting-measurements-and-models" id="toc-connecting-measurements-and-models" class="nav-link" data-scroll-target="#connecting-measurements-and-models"><span class="header-section-number">6</span> Connecting measurements and models</a></li>
+  <li><a href="#possibilities-and-connections" id="toc-possibilities-and-connections" class="nav-link" data-scroll-target="#possibilities-and-connections"><span class="header-section-number">7</span> Possibilities and connections</a></li>
+  <li><a href="#selected-work" id="toc-selected-work" class="nav-link" data-scroll-target="#selected-work"><span class="header-section-number">8</span> Selected work</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/biomechanics/liverpool-fieldwork.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions. Source: Evolutionary Morphology and Biomechanics Group, University of Liverpool."><img src="../../research/assets/images/biomechanics/liverpool-fieldwork.svg" class="img-featured img-fluid quarto-figure quarto-figure-center figure-img" alt="Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions." width="600"></a></p>
+</figure>
+</div>
+<figcaption>Field-based gait measurements in South India, showing wearable instrumentation and comparisons across footwear and surface conditions. Source: Evolutionary Morphology and Biomechanics Group, University of Liverpool.</figcaption>
+</figure>
+</div>
+<section id="what-draws-me-to-this-area" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-draws-me-to-this-area"><span class="header-section-number">1</span> What draws me to this area</h2>
+<p>I am interested in how we move and the tissues that are involved in movement. Walking and balance bring this connection into focus: whole-body movement depends on the interaction of joints, muscles, soft tissues and the ground beneath our feet.</p>
+<p>My research experience spans clinical human-motion analysis at Cambridge and foot and ankle biomechanics at Liverpool. Together, these experiences have shaped my interest in studying movement at different scales, from head and whole-body motion capture to the structure and mechanical behaviour of individual tissues. I bring sensing, biomedical imaging and computational modelling together to explore those connections.</p>
+</section>
+<section id="questions-that-interest-me" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="questions-that-interest-me"><span class="header-section-number">2</span> Questions that interest me</h2>
+<p>Some questions that motivate my work include:</p>
+<ul>
+<li>What can changes in walking and balance tell us, and how can we measure them reliably outside the laboratory?</li>
+<li>How do tissue structure, ageing and loading interact with the mechanics of movement?</li>
+<li>How can imaging and personalised models help us interpret differences between people?</li>
+</ul>
+<p>These questions offer starting points for collaboration across engineering, biomechanics and clinically motivated research.</p>
+</section>
+<section id="understanding-movement-in-a-clinical-context" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="understanding-movement-in-a-clinical-context"><span class="header-section-number">3</span> Understanding movement in a clinical context</h2>
+<p>At the University of Cambridge, I worked on head and whole-body movement analysis with medical consultants and clinical scientists at Addenbrooke’s Hospital (Cambridge University Hospitals NHS Foundation Trust). I contributed to the development of data processing pipelines for ear-based wearable devices for monitoring walking and activities of daily living, and planned optical motion-capture setups that are clinically relevant in the context of balance and neurological disorders.</p>
+<p>A recurring question for me is what a measurement actually tells us: which features of movement are informative, how reliably they can be obtained, and how we can interpret them in relation to the person being assessed.</p>
+</section>
+<section id="looking-beneath-the-surface" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="looking-beneath-the-surface"><span class="header-section-number">4</span> Looking beneath the surface</h2>
+<p><strong>Ultrasound (US), bi-planar X-ray and magnetic resonance imaging (MRI)</strong> are important parts of my experience in biomechanics research. They offer complementary views of tissue structure, deformation and bone motion, helping connect external measurements with what happens within the body.</p>
+<p>At Liverpool, I developed equipment for heel-pad ultrasound imaging and plantar-surface strain measurements. I also constructed participant-specific finite-element models from segmented foot MRI scans and conducted bi-planar X-ray videography experiments with simultaneous force-plate measurements to inform hindfoot simulations.</p>
+<p>What draws me to this work is the possibility of linking anatomy with function. Ultrasound can reveal how the layers beneath the heel respond to loading; MRI provides anatomical information for personalised models; and bi-planar X-ray enables simultaneous investigation of motion and tissue behaviour. These approaches help explore mechanisms that are difficult to observe from the outside alone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/biomechanics/heel-pad-ultrasound.lossless.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Ultrasound reveals the layered structure of the heel pad under load, including the skin, micro-chamber and macro-chamber layers above the calcaneus. From my ISB 2025 poster."><img src="../../research/assets/images/biomechanics/heel-pad-ultrasound.lossless.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Labelled ultrasound image showing heel-pad tissue layers and the calcaneus." width="600"></a></p>
+</figure>
+</div>
+<figcaption>Ultrasound reveals the layered structure of the heel pad under load, including the skin, micro-chamber and macro-chamber layers above the calcaneus. From my ISB 2025 poster.</figcaption>
+</figure>
+</div>
+</section>
+<section id="contributions-from-my-work" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="contributions-from-my-work"><span class="header-section-number">5</span> Contributions from my work</h2>
+<p>Working with colleagues at Liverpool, I contributed to participant studies in the UK, India and Namibia, combining tissue measurements, gait biomechanics and biomedical imaging. Our work included <a href="https://doi.org/10.1080/19424280.2025.2489692">examining age-related differences in the layers of the heel pad</a>. I also investigated spatiotemporal gait parameters across the three populations using both laboratory and field gait measurements, and their correlations with age, weight and other confounding variables.</p>
+<p>I also explored a complementary question: can a quick measurement of surface hardness represent how heel tissues compress under load? Our <a href="../../assets/documents/biomechanics/heel-pad-isb-poster-2025.pdf">conference work</a> found that it did not reliably do so under the tested conditions. This illustrates a question I find especially important: when does a convenient measurement capture the behaviour we want to understand?</p>
+<p>Alongside experimental work, I contributed to a <a href="https://doi.org/10.3390/healthcare13050527">critical review of footwear and locomotor health across the life course</a>, examining the evidence behind common footwear features and their interaction with the foot’s own mechanics.</p>
+</section>
+<section id="connecting-measurements-and-models" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="connecting-measurements-and-models"><span class="header-section-number">6</span> Connecting measurements and models</h2>
+<p>My approach combines wearable and optical sensing, force and pressure measurements, biomedical imaging, and musculoskeletal and finite-element modelling. I value their complementary perspectives: measurements describe movement and loading, imaging reveals anatomical structure, and models help investigate mechanical behaviour.</p>
+<p>Across these activities, I aim to keep the analysis grounded in experimental evidence and attentive to variation between people.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../research/assets/images/biomechanics/mri-tissue-modelling.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="From MRI segmentation to tissue modelling: anatomical segmentation, a three-dimensional mesh, applied boundary conditions and a finite-element analysis example. Selected panel from my research-methods portfolio, showing the connection between medical imaging and computational biomechanics."><img src="../../research/assets/images/biomechanics/mri-tissue-modelling.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Selected computational biomechanics panel showing foot MRI segmentation, a tissue mesh, loading conditions and finite-element analysis." width="650"></a></p>
+</figure>
+</div>
+<figcaption>From MRI segmentation to tissue modelling: anatomical segmentation, a three-dimensional mesh, applied boundary conditions and a finite-element analysis example. Selected panel from my research-methods portfolio, showing the connection between medical imaging and computational biomechanics.</figcaption>
+</figure>
+</div>
+</section>
+<section id="possibilities-and-connections" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="possibilities-and-connections"><span class="header-section-number">7</span> Possibilities and connections</h2>
+<p>I would like to explore further connections between tissue biomechanics, whole-body movement and practical mobility assessment. Possible directions include combining wearable measurements with personalised models, studying variation across populations, and developing accessible ways to interpret biomechanical data.</p>
+<p>I welcome conversations with researchers, clinicians and prospective research students interested in human movement, tissue mechanics, biomedical imaging or computational modelling. If your interests connect with these themes or bring a different perspective, I would be happy to hear from you.</p>
+<p><script type="text/javascript">
+<!--
+h='&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#108;&#110;&#x61;&#x67;&#x67;&#x61;&#114;&#46;&#x6f;&#x6d;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x47;&#x65;&#116;&#32;&#x69;&#110;&#32;&#116;&#x6f;&#x75;&#x63;&#104;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>Get in touch (elnaggar.omar at outlook dot com)</noscript>.</p>
+</section>
+<section id="selected-work" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="selected-work"><span class="header-section-number">8</span> Selected work</h2>
+<ul>
+<li><strong>Ageing and heel tissues:</strong> <a href="https://doi.org/10.1080/19424280.2025.2489692">Impact of ageing on the heel pad: ultrasound imaging of the macrolayer, microlayer and skin</a> — conference abstract, <em>Footwear Science</em>, 2025.</li>
+<li><strong>Interpreting tissue measurements:</strong> <a href="../../assets/documents/biomechanics/heel-pad-isb-poster-2025.pdf">Reliability of Shore Hardness as a Surrogate for Heel Pad Stiffness: A Correlative Study Using Ultrasound Imaging</a> — ISB conference poster, 2025.</li>
+<li><strong>Footwear and walking:</strong> <a href="https://doi.org/10.3390/healthcare13050527">Footwear Choice and Locomotor Health Throughout the Life Course: A Critical Review</a> — <em>Healthcare</em>, 2025.</li>
+</ul>
+<p><strong>Figure credits</strong></p>
+<ul>
+<li>Featured fieldwork figure: <a href="https://www.liverpool.ac.uk/life-course-and-medical-sciences/research/groups/evolutionary-morphology-and-biomechanics-group/">Evolutionary Morphology and Biomechanics Group, University of Liverpool, Figure 5</a>.</li>
+<li>Heel-pad ultrasound: <a href="../../assets/documents/biomechanics/heel-pad-isb-poster-2025.pdf">Elnaggar, Rowlatt and D’Août, ISB 2025 poster</a>.</li>
+</ul>
+<div class="text-center mt-4">
+<p><a href="../../research.html" class="no-external">← Back to Research</a></p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/omarelnaggar007\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© <span id="current-year"></span> <a href="../../index.html" target="_blank" rel="noopener noreferrer">Omar Elnaggar</a>.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script id="quarto-ordinal-dates" type="text/javascript">
+  const dateElements = document.querySelectorAll("p.date, p.date-modified, div.listing-date, div.listing-file-modified");
+  dateElements.forEach((el) => {
+    el.innerHTML = el.innerHTML.replace(
+      /(\d+)(st|nd|rd|th)/g,
+      "$1<sup style='font-size:0.5em;font-style:italic;'>$2</sup>"
+    );
+  });
+</script>
+<script id="quarto-current-year" type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear;
+  });
+</script>
+<script id="quarto-categories-alphabetical" type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const categories = document.querySelectorAll(".quarto-listing-category .category");
+    const container = document.querySelector(".quarto-listing-category");
+
+    // Preserve native click behaviour for pointer and keyboard activation alike.
+    document.addEventListener("keydown", function (event) {
+      const control = event.target.closest('.category[role="button"], .listing-category[role="button"]');
+      if (control && (event.key === "Enter" || event.key === " ")) {
+        event.preventDefault();
+        if (!event.repeat) control.click();
+      }
+    });
+    const categoryMap = {};
+
+    categories.forEach(category => {
+      category.setAttribute("role", "button");
+      category.tabIndex = 0;
+      const dataCategory = category.getAttribute("data-category");
+      const decodedCategory = atob(dataCategory);
+      const firstLetter = decodedCategory.charAt(0).toUpperCase();
+      if (!categoryMap[firstLetter]) {
+        categoryMap[firstLetter] = [];
+      }
+      categoryMap[firstLetter].push(category);
+    });
+
+    Object.keys(categoryMap).sort().forEach(letter => {
+      const groupDiv = document.createElement("div");
+      groupDiv.classList.add("category-group");
+      const button = document.createElement("div");
+      button.classList.add("category", "collapsed");
+      button.setAttribute("data-bs-toggle", "collapse");
+      button.setAttribute("data-bs-target", `#collapse-category-${letter}`);
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", `Toggle ${letter} categories`);
+      button.setAttribute("aria-controls", `collapse-category-${letter}`);
+      button.setAttribute("role", "button");
+      button.tabIndex = 0;
+      button.innerHTML = `<div style="font-style: italic;">${letter}</div>`;
+      const collapseDiv = document.createElement("div");
+      collapseDiv.classList.add("collapse");
+      collapseDiv.id = `collapse-category-${letter}`;
+
+      if (letter.length === 0) {
+        categoryMap[letter].forEach(category => {
+          container.appendChild(category);
+        });
+      } else {
+        categoryMap[letter].forEach(category => {
+          collapseDiv.appendChild(category);
+        });
+        groupDiv.appendChild(button);
+        groupDiv.appendChild(collapseDiv);
+        container.appendChild(groupDiv);
+      }
+    });
+  });
+</script>
+<!-- Custom JavaScript for clipboard.js to properly access code inside modals -->
+<script id="quarto-extensions-listing-clipboardjs" type="text/javascript">
+  // General clipboard.js setup for modals
+  window.document.addEventListener('DOMContentLoaded', (event) => {
+    /**
+    * Initialise clipboard functionality for any modal
+    */
+    const initialiseModalClipboard = () => {
+      // Find all modals in the document
+      const modals = document.querySelectorAll('.modal');
+
+      modals.forEach((modal) => {
+        const modalId = modal.getAttribute('id');
+        if (!modalId) return;
+
+        // Find code copy buttons within this modal
+        const copyButtons = modal.querySelectorAll('.code-copy-button');
+        if (copyButtons.length === 0) return;
+
+        // Add data-in-quarto-modal attribute to buttons in this modal
+        copyButtons.forEach((button) => {
+          button.setAttribute('data-in-quarto-modal', modalId);
+        });
+
+        console.log(`Initialising clipboard for modal: ${modalId}`);
+
+        // Create clipboard instance for this modal
+        const clipboardModal = new window.ClipboardJS(
+          `.code-copy-button[data-in-quarto-modal="${modalId}"]`,
+          {
+            text: (trigger) => {
+              // Get text from the code element, excluding annotations
+              const codeEl = trigger.previousElementSibling.cloneNode(true);
+              const annotations = codeEl.querySelectorAll('[class*="code-annotation-"]');
+              annotations.forEach((annotation) => annotation.remove());
+              return codeEl.innerText;
+            },
+            container: modal // Set the modal as container for clipboard operations
+          }
+        );
+
+        // Success handler with visual feedback
+        clipboardModal.on('success', (e) => {
+          const button = e.trigger;
+          button.blur();
+
+          // Visual feedback
+          button.classList.add('code-copy-button-checked');
+          const currentTitle = button.getAttribute('title');
+          button.setAttribute('title', 'Copied!');
+
+          // Bootstrap tooltip feedback
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute('data-bs-toggle', 'tooltip');
+            button.setAttribute('data-bs-placement', 'left');
+            button.setAttribute('data-bs-title', 'Copied!');
+            tooltip = new bootstrap.Tooltip(button, {
+              trigger: 'manual',
+              customClass: 'code-copy-button-tooltip',
+              offset: [0, -8]
+            });
+            tooltip.show();
+          }
+
+          // Reset after 1 second
+          setTimeout(() => {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute('data-bs-title');
+              button.removeAttribute('data-bs-toggle');
+              button.removeAttribute('data-bs-placement');
+            }
+            button.setAttribute('title', currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+
+          e.clearSelection();
+          console.log(`Copied from modal ${modalId}:`, e.text);
+        });
+
+        // Error handler
+        clipboardModal.on('error', (e) => {
+          console.error(`Clipboard error in modal ${modalId}:`, e);
+          const button = e.trigger;
+          button.setAttribute('title', 'Press Ctrl+C to copy');
+
+          // Visual feedback for error
+          button.style.backgroundColor = '#f8d7da';
+          setTimeout(() => {
+            button.style.backgroundColor = '';
+            button.setAttribute('title', 'Copy to Clipboard');
+          }, 2000);
+        });
+      });
+    };
+
+    // Initialise clipboard for modals
+    initialiseModalClipboard();
+
+    // Also initialise when modals are shown (in case of dynamic content)
+    document.addEventListener('shown.bs.modal', () => {
+      initialiseModalClipboard();
+    });
+  });
+</script>
+<script id="quarto-external-links" type="text/javascript">
+  function addSecurityAttributes(link) {
+    if (link.getAttribute('target') === '_blank') {
+      const currentRel = link.getAttribute('rel') || '';
+      const relValues = new Set(currentRel.split(/\s+/).filter(Boolean));
+      relValues.add('noopener');
+      relValues.add('noreferrer');
+      link.setAttribute('rel', Array.from(relValues).join(' '));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[target="_blank"]').forEach(addSecurityAttributes);
+
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === 1) {
+            if (node.tagName === 'A') {
+              addSecurityAttributes(node);
+            }
+            node.querySelectorAll('a[target="_blank"]').forEach(addSecurityAttributes);
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+<script>
+  document.querySelectorAll('header#title-block-header div, header#title-block-header p').forEach(function(el) {
+    if (!el.textContent.trim()) {
+      el.style.display = 'none';
+      el.textContent = "";
+    }
+  });
+</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

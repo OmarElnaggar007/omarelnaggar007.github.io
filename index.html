@@ -1,748 +1,1209 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HDT10H2FQL"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-HDT10H2FQL');
-		</script>
-
-		<title>Omar Elnaggar</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<div id="header">
-
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image-profile"><img src="images/profile.png" alt="" /></span>
-							<h1 id="title">Omar Elnaggar</h1>
-							<p>Researcher &middot Engineer &middot Entrepreneur</p>
-						</div>
-
-						<div class="bottom">
-
-							<!-- Social Icons -->
-								<ul class="icons">
-									<!-- <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li> -->
-									<!-- <li><a href="#" class="icon brands fa-google"><span class="label">Google</span></a></li> -->
-									<li><a href="https://scholar.google.com/citations?user=WMiYlPEAAAAJ&hl=en&oi=ao" class="ai ai-google-scholar-square ai-1x"></a></li>
-									<!-- <li><i class="ai ai-google-scholar-square ai-1x"></i></li> -->
-									<li><a href="https://www.linkedin.com/in/omar-elnaggar/" class="fab fa-linkedin"></a></li>
-								</ul>
-		
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#aboutme" id="aboutme-link"><span class="icon solid fa-home">About me</span></a></li>
-								<!-- <li><a href="#qualifications" id="qualifications-link"><span class="icon solid fa-graduation-cap">Qualifications</span></a></li> -->
-								<li><a href="#research" id="research-link"><span class="icon solid fa-th">Research</span></a></li>
-								<li><a href="#teaching" id="teaching-link"><span class="icon solid fa-user">Teaching</span></a></li>
-								<li><a href="#publications" id="publications-link"><span class="icon solid fa-book">Publications</span></a></li>
-							</ul>
-						</nav>
-					
-					<!-- mike-icon -->
-					<div class="mike-icon">
-						<svg>
-							<g fill="none" stroke="white" stroke-width="2">
-								<path fill="white" fill-opacity="0.2" d="M10,50 L10,80 L30,80 L50,100 L60,100 L60,30
-								L50,30 L30,50 10,50" stroke-width="2"></path>
-								<path d="M70,30 A120,100 0 0,1 70,100" class="sound"></path>
-								<path d="M80,20 A120,100 0 0,1 80,110" class="sound"></path>
-								<path d="M90,10 A120,100 0 0,1 90,120" class="sound"></path>
-								<line x1="10" y1="105" x2="70" y2="10" stroke="red" stroke-opacity="0.7"
-								stroke-width="4" id="mute"></line>
-							</g>
-						</svg>
-						<p id="mute-text">
-							Better<br />
-							with<br />
-							sound!
-						</p>
-					</div>
-					
-					<div class="volume">
-						<input type="range" class="range" value="0" min="0" max="100">
-						<!-- <span id="pervalue"></span> -->
-					</div>
-
-					<!-- Sound Control Script -->
-					<script type="text/javascript">
-						myAudio = new Audio("Audio/copyright_free_music.mp3"); 
-						if (typeof myAudio.loop == 'boolean')
-						{
-							myAudio.loop = true;
-						}
-						else
-						{
-							myAudio.addEventListener('ended', function() {
-								this.currentTime = 0;
-								this.play();
-							}, false);
-						}
-						var sound = document.getElementsByClassName('sound');
-						for (var i=0; i<sound.length; i++) {
-							sound[i].style.display = "none";
-						}
-						var line = document.getElementsByTagName('input')[0];
-						line.addEventListener('mousemove', function () {
-							// var pervalue = document.getElementById('pervalue');
-							var sp = document.getElementsByTagName('span')[0];
-							if (line.value == 0) {
-								// pervalue.innerHTML = "";
-								var sound = document.getElementsByClassName('sound');
-								for (var i=0; i<sound.length; i++) {
-									sound[i].style.display = "none";
-								}
-								document.getElementById('mute').style.display = "block";
-								document.getElementById('mute-text').style.display = "block";
-							}
-							if (line.value > 0) {
-								// pervalue.innerHTML = line.value + "%";
-								myAudio.play();
-								var sound = document.getElementsByClassName('sound');
-								for (var i=0; i<sound.length; i++) {
-									sound[i].style.display = "block";
-								}
-								document.getElementById('mute').style.display = "none";
-								document.getElementById('mute-text').style.display = "none";
-							}
-							myAudio.volume = line.value / 100;
-						})
-					</script>
-
-				</div>
-
-				
-
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- About me -->
-					<section id="aboutme" class="one dark cover">
-						<div class="container">
-
-							<header>
-								<h2 class="alt">I study <strong>Human Biomechanics</strong> with <strong>Sensing</strong> & <strong>Modelling</strong><br /></h2>
-								<h2 class="alt">I dig the <strong>Science</strong> behind <strong>Teaching</strong> & <strong>Learning</strong><br /></h2>
-								<h2 class="alt">I build <strong>Solutions</strong> with <strong>Entrepreneurship</strong><br /></h2>
-
-								<br />
-
-								<p>PhD in Mechanical, Materials and Aerospace Engineering (2019 - 2024), University of Liverpool, UK<br />
-									<strong>Intelligent Wearable Sensing for Human Sleep Posture Classification and Temporal Analyses</strong><br />
-									Under the supervision of <a href="https://pcwww.liv.ac.uk/~paoletti/">Paolo Paoletti</a>, <a href="https://cgi.csc.liv.ac.uk/~frans/">Frans Coenen</a> and <a href="https://uk.linkedin.com/in/andrew-hopkinson-6082b822">Andrew Hopkinson</a></p>
-								
-								<br /><br />
-								
-								<p>MEng in Mecharonic Engineering (2015 - 2019), University of Nottingham, UK</p>
-								
-								<br /><br /><br /><br />
-								
-								<a href="Files/CV_Omar.pdf">Curriculum Vitae</a>
-
-								<br />
-
-								<p class="icon solid fa-envelope"> elnaggar.omar@outlook.ac.uk</p>
-
-								<!-- <p class="icon solid fa-home"> 7 Lower Gill Street, Liverpool, L3 5BB, UK</p> -->
-							</header>
-
-							<!-- <footer>
-								<a href="#research" class="button scrolly">Magna Aliquam</a>
-							</footer> -->
-
-						</div>
-					</section>
-
-				<!-- Research -->
-					<section id="research" class="three">
-						<div class="container">
-
-							<header>
-								<h2 class="alt"><strong>Research</strong></h2>
-							</header>
-
-							<header>
-							<h3 class="alt"><strong>Research Skills Portfolio</strong></h3>
-							</header>
-
-							<a href="#" class="image featured"></a><img src="images/research skillset portfolio.png" alt="" width="100%" height="auto"/></a>
-							
-							<header>
-							<h3 class="alt"><strong>Human Motion Analysis for Healthcare</strong></h3>
-							</header>
-
-							<!-- <video width="700" controls>
-								<source src="videos/SkyModel_with_MATLAB_Plots.mov" type="video/mp4">
-							</video> -->
-							
-							<div class="responsive_cropped video">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/pSJRnnTFQlk" title="YouTube video player" frameborder="0" 
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-duEW_iJgjk" title="YouTube video player" frameborder="0" 
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-								
-								<!-- <iframe src="https://drive.google.com/file/d/1Wma26qY0grmnQw3IztTuxFFvt6pnEQP8/preview" alt ="Video is unavailable" 
-								width="700" height="437" frameborder="0" allowfullscreen></iframe> -->
-								<!-- <iframe src="https://drive.google.com/file/d/1Wma26qY0grmnQw3IztTuxFFvt6pnEQP8/preview" alt ="Video is unavailable" 
-								width="700" height="437" allow="autoplay"></iframe> -->
-							</div>
-							
-							<!-- <a href="#" class="image featured"></a><iframe src="https://drive.google.com/file/d/1Wma26qY0grmnQw3IztTuxFFvt6pnEQP8
-							/preview" alt ="Video is unavailable" width="700" height="437" frameborder="0" allowfullscreen></iframe></a> -->
-
-							<a href="#" class="image featured"></a><img src="images/SystemDiagramReduced_nobackground.png" alt="" width="70%" height="auto"/></a>
-							<p style="text-align:justify">Studying the posture and motion of musculoskeletal systems finds many applications
-							that bring about a higher quality of life to both healthy and physically disabled adults. My research focuses on
-							the creation of AI-empowered wearable sensors which analyse human sleep posture potentially linked to the development of
-							certian musculoskeletal morbidities.</p>
-
-							<header>
-							<h3 class="alt"><strong>Augmented Reality and Motion Capture</strong></h3>
-							</header>
-							
-							<!-- <div class="myvideo"></div> -->
-							<div class="row">
-								<div class="mytwoimagesclm">
-									<!-- <iframe width="100%;" src="https://www.youtube.com/embed/pSJRnnTFQlk" title="YouTube video player" frameborder="0" 
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-									<!-- <img src="images/SystemDiagramReduced_nobackground.png" width="100%;"> -->
-									<h4 class="alt"><strong>Body Motion Capture</strong></h4>
-									<img src="images/ARKIT Body.GIF" alt="" width="100%" height="auto"/>
-								</div>
-
-								<div class="mytwoimagesclm">
-									<!-- <iframe width="100%;" src="https://www.youtube.com/embed/pSJRnnTFQlk" title="YouTube video player" frameborder="0" 
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-									<h4 class="alt"><strong>Facial Motion Capture</strong></h4>
-									<img src="images/ARKIT Face.GIF" alt="" width="100%" height="auto"/>
-								</div>
-							</div>
-
-							<p style="text-align:justify">Human motion capture is bewildering for some of us. Augmented Reality (AR) is increasingly becoming a universal
-							and exciting language, turning information into experiences. I believe AR is an eminently useful tool to
-							communicate my research to everybody; the technical expert and the enthusiast.</p>
-
-							<!-- <div class="responsive_cropped2 video">
-								<iframe width="60" height="315" src="https://www.youtube.com/embed/rrR7ubE2sWo" title="YouTube video player" frameborder="0" 
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-							<p style="text-align:justify">Studying the pose and motion of musculoskeletal systems find many applications
-							that bring about a higher quality of life to both healthy and physically disabled adults. My research focuses on
-							the creation of AI-empowered wearable sensors which analyse human sleeping poses potentially linked to the occurrence of
-							certian musculoskeletal complications.</p> -->
-
-							<header>
-							<h3 class="alt"><strong>Biorobotic Prostheses</strong></h3>
-							</header>
-
-							<a href="#" class="image featured"></a><img src="images/Biorobotic_Prosthesis.png" alt="" width="70%" height="auto"/></a>
-							<p style="text-align:justify">Prosthetics are faced by many challenges such as limited dexterity and cumbersome control
-								scheme. This individual project successfully delivered a highly biomimetic, bio-robotic hand prosthesis. Structurally,
-								the prosthesis consist of rigid and soft parts which were additively manufactured via multi-material 3D-printing. The
-								design is inspired from a laser/MRI-scanned cadaver hand. Additionally, a myoelectric control scheme is implemented
-								to allow for different hand postures/grasps as intended by the amputee.</p>
-							
-							<header>
-							<h3 class="alt"><strong>Natural Language Processing</strong></h3>
-							</header>
-
-							<a href="#" class="image featured"></a><img src="images/Speaker_Recognition.png" alt="" width="70%" height="auto"/></a>
-							<p style="text-align:justify">State-of-the-art speaker identification systems have achieved accuracies up to 100% with
-								long-duration utterances which are not always available. In this work, a novel speaker recognition approach is proposed
-								using short-utterance recordings (<1 sec). This is made possible with the parametric AI-based dimensionality reduction
-								which produced the above 3D visualisation of speaker-dependent features, demonstrating inter-speaker separability.</p>
-		
-
-						</div>
-					</section>
-				
-				<!-- Teaching -->
-					<section id="teaching">
-						<div class="container">
-
-							<header>
-								<h2 class="alt"><strong>Teaching</strong></h2>
-							</header>
-
-							<header>
-							<h3 class="alt"><strong>Interactive Teaching Materials</strong></h3>
-							</header>
-							<p style="text-align:justify">I design and develop interactive materials for my students to engage with, 
-							creating exploratory learning experiences. Below is an example in action, where I used sliders and real-time 
-							display to help students understand and visualise robot control. These interactive modules promote active exploration 
-							of complex concepts, allowing learners to experiment on their own and gain deeper insights through experimentation rather than 
-							passive observation. At a recent <strong>Advance HE Conference</strong>, I proposed and presented a novel framework that streamlines 
-							the creation of such materials, enabling educators to design, generate, customise, and deploy interactive materials rapidly 
-							without extensive knowledge of IT tools.</p>
-							<a href="#" class="image featured"></a><img src="images/interactive_robot_pid_control.gif" alt="" width="55%" height="auto"/></a>
-							
-							<br><br>
-							<header>
-							<h3 class="alt"><strong>Recognised Educator and Associate Fellow of Advance HE</strong></h3>
-							</header>
-
-							<!-- <embed src="Files/Omar Elnaggar - Associate Fellowship.pdf#page=1&view=FitV" type="application/pdf" width="100%" height="600px" /> -->
-							<p style="text-align:justify">While pursuing my PhD degree, I was awarded the Associate Fellowship of the Higher Education Academy 
-							(Advance HE), a mark of professional contributions to teaching and learning. This recognition affirms my commitment to the development 
-							of educational technologies, evidence‑informed pedagogy, inclusive curriculum design, and student‑centered mentorship. 
-							It underscores my dedication to ongoing reflective practice and continuous improvement in higher education.</p>
-							<a href="#" class="image featured"></a><img src="images/AFHEA.png" alt="" width="50%" height="auto"/></a>
-							
-							<br><br>
-							<header>
-							<h3 class="alt"><strong>Evaluation of Knowledge Exchange (KE) in Classrooms using AI</strong></h3>
-							</header>
-							<p style="text-align:justify">Little attention is paid to the value of incorporating KE in classroom teaching,
-							leaving students out of the current KE pipeline. This project attempts to meeasure the effectiveness of the KE process
-							in which teacher-to-student	and peer interactions play a major role. A coursework-based framework was designed such
-							that two checkpoints reflect a before-and-after abrupt change scenario which is common in industrial environments.
-							Then, a survey-based approach was adopted to measure students’ knowledge at each checkpoint. With the aid of an
-							AI-based visualisation technique, we are able to extract insights from a low-dimensional map, supported with standard
-							metrics, to gauge the individual’s knowledge and how they are positioned within the entire population of students.</p>
-							<a href="#" class="image featured"></a><img src="images/KE_framework_nobackground.png" alt="" width="80%" height="auto"/></a>
-							<a href="#" class="image featured"></a><img src="images/KE Visualisations_no background.png" alt="" width="80%" height="auto"/></a>
-
-							<br><br>
-							<header>
-							<h3 class="alt"><strong>Startup: Engineering Virtual Labs</strong></h3>
-							<h3 class="alt"><img src="images/Winner_Animation.gif" alt="" width="20%" height="auto"/> of UCL's "Build Your Own 
-							Business 3" Pitch Contest 2021</h3>
-							<h3 class="alt">(aka Launch £10,000 Programme)</h3>
-							</header>
-							<p style="text-align:justify">COVID-19 disrupted the higher education landscape which consequently enforced a shift
-							towards a more blended teaching and learning approach and accelerated the digitalisation of education. At the
-							core of digital education is the element of practical sessions which brought teachers to think about how to maintain
-							student	engagement in the digital world. Motivated by the limited available solutions, I took the initiaive of
-							building specialised virtual labs for engineering courses empowered by 3D Game Development and gamification. My work
-							received positive feedback from academics in/out of the United Kingdom, therefore I am currently working on a startup
-							company which should launch soon.</p>
-							<a href="#" class="image featured"></a><img src="images/Virtual_Lab.png" alt="" width="80%" height="auto"/></a>
-							<a href="#" class="image featured"></a><img src="images/Virtual_Lab_Animation.gif" alt="" width="80%" height="auto"/></a>
-							
-							<br><br>
-							<header>
-							<h3 class="alt"><strong>Teaching Experience: Summary and Highlights</strong></h3>
-							</header>
-
-							<div class="container lefty">
-							<ul>
-								<li>
-								Served as a <span class="container leftyblue">Graduate Teaching Assistant</span> (2020–2024) and 
-								<span class="container leftyblue">Postdoctoral Teaching Associate</span> (2024–Present) at <span class="container leftyred">The University of Liverpool</span>.
-								</li>
-								<li>
-								Taught across <span class="container leftyblue">five BEng/MEng programmes</span>:
-								<ul style="margin: 0">
-									<li>Mechanical Engineering</li>
-									<li>Aerospace Engineering</li>
-									<li>Mechatronics &amp; Robotic Systems</li>
-									<li>Electrical &amp; Electronic Engineering</li>
-									<li>Civil &amp; Structural Engineering</li>
-								</ul>
-								</li>
-								<li>
-								Delivered <span class="container leftyblue">core modules</span> in <span class="container leftyblue">multidisciplinary areas</span>:
-								<ul style="margin: 0">
-									<li>Engineering Mathematics &amp; Computing</li>
-									<li>Computational Methods in Engineering</li>
-									<li>Experimental Methods</li>
-									<li>Signal Processing &amp; Digital Filtering</li>
-									<li>Digital Control &amp; Optimisation</li>
-									<li>Neural Networks</li>
-									<li>Robotic Systems</li>
-									<li>Dynamic Systems</li>
-								</ul>
-								</li>
-								<li>
-								Designed and delivered <strong>in‑person</strong> and <strong>virtual sessions</strong>, boosting attendance by 15 %.
-								</li>
-								<li>
-								Developed and led hands‑on <strong>laboratory sessions</strong>, resulting in a 95 % student pass rate.
-								</li>
-								<li>
-								Standardised and demonstrated over 40 sessions using <strong>SOPs</strong> and <strong>pre‑lab briefs</strong>, with no safety incidents.
-								</li>
-								<li>
-								Assessed and provided <strong>personalised feedback</strong>, earning acclaim in student evaluations.
-								</li>
-								<li>
-								Shadowed module coordinators in <strong>tutorials</strong> and <strong>seminars</strong>, addressing student queries and fostering critical thinking.
-								</li>
-								<li>
-								Co‑designed new <strong>MATLAB/Simulink workshop</strong> series, resolving long‑standing issues from previous years.
-								</li>
-								<li>
-								Fully proficient with <strong>virtual learning environments</strong>, particularly Moodle and Blackboard.
-								</li>
-							</ul>
-							</div>
-
-							<a href="#" class="image featured"></a><img src="images/School_Of_Engineering.jpeg" alt="" width="70%" height="auto"/></a>
-							
-							<header>
-								<h1 class="alt"><strong>@ School of Engineering, University of Liverpool, UK</strong></h1>
-							</header>
-
-							<header>
-							<h3 class="alt"><strong>Guest Lectures (Teaching)</strong></h3>
-							</header>
-
-							<div class="container lefty">
-							<ul>
-								<li>
-									Guest Lecture: <span class="container leftyblue">Sensors and Perception in Robotics</span>, <span class="container leftyred">University of Sheffield</span> (Feb 2022-25)
-								</li>
-								<li>
-									Guest Lecture: <span class="container leftyblue">Stochastic Processes</span>, <span class="container leftyred">University of Sheffield</span> (Dec 2020).
-								</li>
-							</ul>
-							</div>
-		
-
-						</div>
-					</section>
-
-				<!-- Teaching -->
-				<!-- <section id="teaching" class="two">
-					<div class="container">
-
-						<header>
-							<h2>Teaching</h2>
-						</header>
-
-						<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-						egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-						Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-						fusce hendrerit lacus ridiculus.</p>
-
-						<div class="row">
-							<div class="col-4 col-12-mobile">
-								<article class="item">
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<header>
-										<h3>Ipsum Feugiat</h3>
-									</header>
-								</article>
-								<article class="item">
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<header>
-										<h3>Rhoncus Semper</h3>
-									</header>
-								</article>
-							</div>
-							<div class="col-4 col-12-mobile">
-								<article class="item">
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<header>
-										<h3>Magna Nullam</h3>
-									</header>
-								</article>
-								<article class="item">
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<header>
-										<h3>Natoque Vitae</h3>
-									</header>
-								</article>
-							</div>
-							<div class="col-4 col-12-mobile">
-								<article class="item">
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<header>
-										<h3>Dolor Penatibus</h3>
-									</header>
-								</article>
-								<article class="item">
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<header>
-										<h3>Orci Convallis</h3>
-									</header>
-								</article>
-							</div>
-						</div>
-
-					</div>
-				</section> -->
-
-				<!-- Publications -->
-					<section id="publications" class="three">
-						<div class="container">
-
-							<header>
-								<h2 class="alt"><strong>Publications</strong></h2>
-							</header>
-
-							<div class="container lefty">
-								<header>
-									<h3 class="alt"><strong>Research Publications</strong></h3>
-								</header>
-							</div>
-
-							<div class="container lefty">
-								<ol>
-									<li>
-									    O. Elnaggar, R. Arelhi, F. Coenen, A. Hopkinson, and P. Paoletti,
-									    <span class="container leftyblue">
-									        Wearable-derived joint kinematics for sleep posture analysis
-									    </span>,
-									    Eighth UK Mobile, Wearable and Ubiquitous Systems Research Symposium
-									    (MobiUK 2026), 2026.
-										[
-										<span class="container leftyred">
-		
-											<a href="Files/wearable-derived-joint-kinematics-for-sleep-posture-analysis.html">
-												Publication Page
-											</a>
-		
-										</span>
-										]
-									    [
-									    <span class="container leftyred">
-									        <a href="Files/Wearable-derived-joint-kinematics-for-sleep-posture-analysis.pdf">
-									            Link to Paper
-									        </a>
-									    </span>
-									    ]
-										[
-										<span class="container leftyred">
-		
-											<a href="https://www.mobiuk.org/2026/abstracts/S4_Wearable_derived_joint_kinematics.pdf">
-												Official MobiUK PDF
-											</a>
-		
-										</span>
-										]
-									</li>
-									
-									<li>
-										K. D'Aout, O. Elnaggar, A. Rowlatt, C. Brockett, A. Sharp, and C. Willems, 
-										<span class="container leftyblue">The Ageing Human Heel Pad: Assessing Mechanical Behaviour in the Lab and in the Field</span>, 
-										Society for Experimental Biology (SEB) Annual Conference, 2025. 
-										[<span class="container leftyred"><a href="https://issuu.com/societyforexperimentalbiology/docs/seb_antwerp_-_abstract_book">
-											Link to Abstract Book</a></span>]
-									</li>
-
-									<li>
-										A. Rowlatt, O. Elnaggar, and K. D'Aout, 
-										<span class="container leftyblue">Impact of ageing on the heel pad: ultrasound imaging of the macrolayer, microlayer and skin</span>, 
-										Footwear Science, 2025. [<span class="container leftyred"><a href="https://doi.org/10.1080/19424280.2025.2489692">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, A. Rowlatt, and K. D'Aout, 
-										<span class="container leftyblue">Reliability of Shore Hardness as a Surrogate for Heel Pad Stiffness: A Correlative Study Using Ultrasound Imaging</span>, 
-										Congress of International Society of Biomechanics, 2025. 
-										[<span class="container leftyred"><a href="https://omarelnaggar007.github.io/Files/Poster%20ISB%202025.pdf">
-											Link to Abstract</a></span>]
-									</li>
-									
-									<li>
-										K. D’Aout, O. Elnaggar, L. Mason, A. Rowlatt, and C. Willems, 
-										<span class="container leftyblue">Footwear choice and locomotor health throughout the life course: a critical review</span>, 
-										Healthcare, 2025. [<span class="container leftyred"><a href="https://doi.org/10.3390/healthcare13050527">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, A. Hopkinson, F. Coenen, and P. Paoletti, 
-										<span class="container leftyblue">Sensor-enabled Sleep Posture Analysis: State-of-the-art and Opportunities of Wearable Technologies from Clinical, Sensing and 
-											Intelligent Perception Perspectives</span>, 
-											Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, 2025. 
-										[<span class="container leftyred"><a href="https://doi.org/10.1016/B978-0-443-22206-1.00004-8">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, R. Arelhi, F. Coenen, A. Hopkinson, L. Mason, and P. Paoletti, 
-										<span class="container leftyblue">An interpretable framework for sleep posture change detection and postural inactivity segmentation using wrist kinematics</span>, 
-										Scientific Reports, 2023. [<span class="container leftyred"><a href="https://doi.org/10.1038/s41598-023-44567-9">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, F. Coenen, A. Hopkinson, L. Mason, and P. Paoletti, 
-										<span class="container leftyblue">Sleep Posture One-Shot Learning Framework based on Extremity Joint Kinematics: In-Silico and In-Vivo Case Studies</span>, 
-										Information Fusion, 2023. [<span class="container leftyred"><a href="https://doi.org/10.1016/j.inffus.2023.02.003">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, F. Coenen, A. Hopkinson, L. Mason, and P. Paoletti, 
-										<span class="container leftyblue">Sleep Posture Classification: From In-Silico Proof-of-concept to Validation with Wearable Sensors</span>, 
-										Insigneo Showcase, United Kingdom, 2022. 
-										[<span class="container leftyred"><a href="https://omarelnaggar007.github.io/Files/Insigneo%20Poster%202022.pdf">
-											Link to Poster</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, F. Coenen, A. Hopkinson, and P. Paoletti, 
-										<span class="container leftyblue">Generalised Joint Kinematic Analysis and 3D Visualisation: A Human Wrist Case Study</span>, 
-										BioMedEng22 Conference, United Kingdom, 2022. 
-										[<span class="container leftyred"><a href="https://omarelnaggar007.github.io/Files/Generalised%20joint%20kinematic%20analysis%20and%203D%20visualisation%20-%20a%20human%20wrist%20case%20study.pdf">
-											Link to Abstract</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, F. Coenen, A. Hopkinson, and P. Paoletti, 
-										<span class="container leftyblue">Perception of Sleeping Poses Using Extremity Limb Orientations</span>, 
-										BioMedEng21 Conference Proceedings, United Kingdom, 2021. 
-										[<span class="container leftyred">
-											<a href="https://omarelnaggar007.github.io/Files/Perception%20of%20Sleeping%20Poses%20Using%20Spase%20Inertial%20Cues.pdf">
-											Link to Abstract</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, F. Coenen, and P. Paoletti, 
-										<span class="container leftyblue">In-Bed Human Pose Classification Using Sparse Inertial Signals</span>, 
-										40<sup>th</sup> International Conference on Innovative Techniques and Applications of Artificial Intelligence, Springer, Cham, 2020. 
-										[<span class="container leftyred"><a href="https://doi.org/10.1007/978-3-030-63799-6_25">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, F. Coenen, and P. Paoletti, 
-										<span class="container leftyblue">Wearable Sensing For Non-invasive Human Pose Recognition During Sleep</span>, 
-										AI for Future Digital Health Workshop, SGAI 40<sup>th</sup> International Conference on Artificial Intelligence, 2020. 
-										[<span class="container leftyred"><a href="https://youtu.be/jNGYK4xEACM">
-											Link to Video</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, and R. Arelhi, 
-										<span class="container leftyblue">A New Unsupervised Short-Utterance based Speaker Identification Approach with Parametric t-SNE Dimensionality Reduction</span>, 
-										International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan, 2019. 
-										[<span class="container leftyred"><a href="https://doi.org/10.1109/ICAIIC.2019.8669051">
-											Link to Paper</a></span>]
-									</li>
-									
-									<li>
-										O. Elnaggar, and R. Arelhi, 
-										<span class="container leftyblue">An Unsupervised Speaker Identification Approach: A Breakthrough 3D Visualization of High Dimensional Features</span>, 
-										21<sup>st</sup> International Conference on Artificial Intelligence and Pattern Recognition (ICAIPR), Singapore, 2019. 
-										[<span class="container leftyred">
-											<a href="https://omarelnaggar007.github.io/Files/An%20Unsupervised%20Speaker%20Identification%20Approach%20-%20A%20Breakthrough%203D%20Visualization%20of%20High%20Dimensional%20Features.pdf">
-												Link to Paper</a></span>]
-									</li>
-								</ol>
-							</div>
-
-							<div class="container lefty">
-								<header>
-									<h3 class="alt"><strong>Teaching Publications</strong></h3>
-								</header>
-							</div>
-
-							<div class="container lefty">
-								<ol>
-									<li>
-										O. Elnaggar, and R. Arelhi, 
-										<span class="container leftyblue">A Generative AI-empowered Framework for Creating Interactive Learning Materials Without Prior Technical Expertise</span>, 
-										AdvanceHE Teaching and Learning Conference, United Kingdom, 2025. 
-										[<span class="container leftyred"><a href="https://omarelnaggar007.github.io/Files/AdvanceHE%20Abstract%202025.pdf">
-											Link to Abstract</a></span>]
-									</li>
-									<li>
-										O. Elnaggar, and R. Arelhi, 
-										<span class="container leftyblue">Game-based Learning in Engineering Education: 
-											How can we reconcile seemingly conflicting interests of students, academics, universities and national policy makers?</span>, 
-										BERA (British Educational Research Association) Conference, United Kingdom, 2022. 
-										[<span class="container leftyred"><a href="https://omarelnaggar007.github.io/Files/BERA%202022%20Abstract.pdf">
-											Link to Abstract</a></span>]
-									</li>
-									<li>
-										O. Elnaggar, and R. Arelhi, 
-										<span class="container leftyblue">Design and Development of Game-based Learning for Virtual Engineering Laboratories: Two Case Studies</span>, 
-										AdvanceHE Teaching and Learning Conference, United Kingdom, 2022. 
-										[<span class="container leftyred"><a href="https://www.advance-he.ac.uk/sites/default/files/2022-07/Day%201%20-%20Teaching%20and%20Learning%20Conference%202022_0.pdf">
-											Link to Abstract</a></span>]
-									</li>
-									<li>
-										O. Elnaggar, and R. Arelhi, 
-										<span class="container leftyblue">Quantification of Knowledge Exchange Within Classrooms: An AI-based Approach</span>, 
-										9<sup>th</sup> European Conference on Education, United Kingdom, 2021. 
-										[<span class="container leftyred"><a href="https://doi.org/10.22492/issn.2188-1162.2021.17">
-											Link to Paper</a></span>]
-									</li>
-								</ol>
-							</div>
-
-						</div>
-					</section>
-				
-				<!-- Publications -->
-					<!-- <section id="publications" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section> -->
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; All rights reserved.</li><li>Design: Omar Elnaggar</li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Omar Elnaggar is an Assistant Professor at Warwick and Honorary Lecturer at UCL, working in robotics, wearable sensing, biomechanics and engineering education.">
+
+<title>Omar Elnaggar | Robotics and Biomechanics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href=".//assets/images/omar-elnaggar-favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de1215aa7a72655401e1ea8563358ae8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f90b9a2f02bdf50f5114de277d3ddac9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de1215aa7a72655401e1ea8563358ae8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b035ee5a3cf21e067a247b9c4345b9a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f26f28f9af73f4afde3ed68f3eae6090.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b035ee5a3cf21e067a247b9c4345b9a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/code-window-0.1.0/style.css" rel="stylesheet">
+<script>document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll("pre.cw-auto").forEach(function(pre){
+    var fn=pre.closest("[data-filename]");
+    if(!fn)return;
+    var name=fn.getAttribute("data-filename");
+    if(!name)return;
+    var scaffold=pre.closest(".code-copy-outer-scaffold")||pre.closest(".sourceCode");
+    if(!scaffold)return;
+    var w=document.createElement("div");
+    w.className="code-with-filename code-window-auto";
+    var tb=document.createElement("div");
+    tb.className="code-with-filename-file";
+    var tp=document.createElement("pre");
+    var ts=document.createElement("strong");
+    ts.textContent=name;
+    tp.appendChild(ts);tb.appendChild(tp);
+    scaffold.parentNode.insertBefore(w,scaffold);
+    w.appendChild(tb);w.appendChild(scaffold);
+    pre.classList.remove("cw-auto");
+  });
+  document.querySelectorAll(".code-with-filename").forEach(function(el){
+    if(/\bcode-window-(macos|windows|default)\b/.test(el.className))return;
+    var c=el.querySelector('[class*="cw-style-"]');
+    if(c){var m=c.className.match(/cw-style-(\w+)/);if(m){el.classList.add("code-window-"+m[1]);c.classList.remove(m[0]);return;}}
+    el.classList.add("code-window-macos");
+  });
+});</script>
+<script src="site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HDT10H2FQL"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HDT10H2FQL', { 'anonymize_ip': true});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://omarelnaggar007.github.io/#person",
+      "name": "Omar Elnaggar",
+      "givenName": "Omar",
+      "familyName": "Elnaggar",
+      "url": "https://omarelnaggar007.github.io/",
+      "image": "https://omarelnaggar007.github.io/assets/images/omar-elnaggar.portrait.webp",
+      "sameAs": [
+        "https://www.linkedin.com/in/omar-elnaggar/",
+        "https://github.com/omarelnaggar007",
+        "https://orcid.org/0000-0001-7417-6023",
+        "https://scholar.google.com/citations?user=WMiYlPEAAAAJ"
+      ],
+      "description": "Assistant Professor in Robotics and Automation — Warwick Manufacturing Group, University of Warwick; Honorary Lecturer — Department of Electronic and Electrical Engineering, University College London."
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://omarelnaggar007.github.io/#profile",
+      "url": "https://omarelnaggar007.github.io/",
+      "name": "Omar Elnaggar",
+      "mainEntity": {
+        "@id": "https://omarelnaggar007.github.io/#person"
+      }
+    }
+  ]
+}
+</script>
+
+
+<meta property="og:title" content="Omar Elnaggar | Robotics and Biomechanics">
+<meta property="og:description" content="Omar Elnaggar is an Assistant Professor at Warwick and Honorary Lecturer at UCL, working in robotics, wearable sensing, biomechanics and engineering education.">
+<meta property="og:image" content="https://omarelnaggar007.github.io/assets/images/omar-elnaggar-social.png">
+<meta property="og:site_name" content="Omar Elnaggar">
+<meta property="og:image:alt" content="Omar Elnaggar’s portrait beside his name in the website’s approved lettering.">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Omar Elnaggar | Robotics and Biomechanics">
+<meta name="twitter:description" content="Omar Elnaggar is an Assistant Professor at Warwick and Honorary Lecturer at UCL, working in robotics, wearable sensing, biomechanics and engineering education.">
+<meta name="twitter:image" content="https://omarelnaggar007.github.io/assets/images/omar-elnaggar-social.png">
+<meta name="twitter:image:alt" content="Omar Elnaggar’s portrait beside his name in the website’s approved lettering.">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://omarelnaggar007.github.io/">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/images/omar-elnaggar-wordmark-light.svg" alt="Omar Elnaggar" class="navbar-logo light-content">
+    <img src="./assets/images/omar-elnaggar-wordmark-dark.svg" alt="Omar Elnaggar" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Omar Elnaggar</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Reflections</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:elnaggar.omar@outlook.com"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa7-solid:envelope" aria-label="Email Omar Elnaggar" title="Email Omar Elnaggar"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/omar-elnaggar/" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa7-brands:linkedin" aria-label="Omar Elnaggar on LinkedIn" title="Omar Elnaggar on LinkedIn"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/omarelnaggar007" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Omar Elnaggar on GitHub" title="Omar Elnaggar on GitHub"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-7417-6023" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa7-brands:orcid" aria-label="Omar Elnaggar on ORCID" title="Omar Elnaggar on ORCID"></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=WMiYlPEAAAAJ" rel="noopener noreferrer" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="simple-icons:googlescholar" aria-label="Omar Elnaggar on Google Scholar" title="Omar Elnaggar on Google Scholar"></iconify-icon></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<div class="quarto-about-solana column-body">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Omar Elnaggar</h1>
+<p class="subtitle lead"><span class="profile-appointment"><strong>Assistant Professor in Robotics and Automation</strong><br>Warwick Manufacturing Group<br>University of Warwick</span> <span class="profile-appointment"><strong>Honorary Lecturer</strong><br>Department of Electronic and Electrical Engineering<br>University College London</span></p>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header> <div class="about-links">
+  <a href="mailto:elnaggar.omar@outlook.com" class="about-link" rel="" target="">
+     <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa7-solid:envelope" aria-label="Email Omar Elnaggar" title="Email Omar Elnaggar"></iconify-icon></span>
+  </a>
+  <a href="https://www.linkedin.com/in/omar-elnaggar/" class="about-link" rel="noopener noreferrer" target="_blank">
+     <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa7-brands:linkedin" aria-label="Omar Elnaggar on LinkedIn" title="Omar Elnaggar on LinkedIn"></iconify-icon></span>
+  </a>
+  <a href="https://github.com/omarelnaggar007" class="about-link" rel="noopener noreferrer" target="_blank">
+     <span class="about-link-text"><iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Omar Elnaggar on GitHub" title="Omar Elnaggar on GitHub"></iconify-icon></span>
+  </a>
+  <a href="https://orcid.org/0000-0001-7417-6023" class="about-link" rel="noopener noreferrer" target="_blank">
+     <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa7-brands:orcid" aria-label="Omar Elnaggar on ORCID" title="Omar Elnaggar on ORCID"></iconify-icon></span>
+  </a>
+  <a href="https://scholar.google.com/citations?user=WMiYlPEAAAAJ" class="about-link" rel="noopener noreferrer" target="_blank">
+     <span class="about-link-text"><iconify-icon role="img" inline="" icon="simple-icons:googlescholar" aria-label="Omar Elnaggar on Google Scholar" title="Omar Elnaggar on Google Scholar"></iconify-icon></span>
+  </a>
+</div>
+      <div class="about-contents"><div id="edu-exp">
+</div></div>
+    </div>
+    <img src="assets/images/omar-elnaggar.portrait.webp" alt="Portrait of Omar Elnaggar" class="about-image
+  round " style="height: 13.5em; width: 13.5em;">
+  </div>
+</div>
+
+<div class="about-body">
+<p>I am an Assistant Professor in Robotics and Automation at Warwick Manufacturing Group, University of Warwick, and an Honorary Lecturer in the Department of Electronic and Electrical Engineering at University College London. My work connects engineering education with wearable sensing, human biomechanics and healthcare engineering, bringing together practical teaching and research into human posture and movement.</p>
+<p>My background spans mechatronic engineering, academic and clinical research, and university teaching. Before joining Warwick, I was a Teaching Associate in Robotics and Intelligent Systems at Queen Mary University of London and held research appointments at the Universities of Liverpool and Cambridge. I hold a first-class MEng in Mechatronic Engineering from the University of Nottingham and a PhD in Engineering from the University of Liverpool. I am a Chartered Scientist and a Fellow of the Higher Education Academy.</p>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6272696566636173652d3234203e7d7d-what-i-do" class="level2">
+<h2 data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6272696566636173652d3234203e7d7d-what-i-do"><iconify-icon role="img" inline="" icon="octicon:briefcase-24" aria-label="Icon briefcase-24 from octicon Iconify.design set." title="Icon briefcase-24 from octicon Iconify.design set."></iconify-icon> What I Do</h2>
+<p><strong>Robotics and automation teaching</strong><br>
+I help undergraduate and postgraduate students turn engineering theory into working systems. My teaching spans robotics, mechatronics, control, artificial intelligence and engineering computing, using authentic practical laboratories, design-build activities and project supervision to develop technical skills, critical thinking and professional judgement. At UCL, I contribute to <em>Robotics for Medicine and Industry</em>, teaching prosthetics, wearable technologies and biomechanics.</p>
+<p><strong>Wearable sensing and biomechanics research</strong><br>
+I develop and evaluate methods to understand human posture and movement, combining wearable sensors, machine learning, experimental measurements and computational modelling. My doctoral research focused on <a href="./research/sleep-posture/index.html" class="no-external">intelligent wearable sensing for sleep posture assessment</a>. My subsequent research experience includes clinical gait analysis and the <a href="./research/human-movement-tissue-biomechanics/index.html" class="no-external">biomechanics of ageing foot tissues</a>, working with engineers and clinicians to connect engineering methods with healthcare questions.</p>
+<p><strong>Engineering education</strong><br>
+I design and investigate practical, active learning experiences that help students understand complex engineering concepts and apply them with confidence. My educational research and development includes <a href="./research/engineering-education/index.html" class="no-external">virtual engineering laboratories</a>, game-based learning and AI-supported interactive materials. I combine these approaches with authentic assessment, inclusive teaching and constructive feedback to support students’ participation and development.</p>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a746f6f6c732d3234203e7d7d-technical-skills" class="level2">
+<h2 data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a746f6f6c732d3234203e7d7d-technical-skills"><iconify-icon role="img" inline="" icon="octicon:tools-24" aria-label="Icon tools-24 from octicon Iconify.design set." title="Icon tools-24 from octicon Iconify.design set."></iconify-icon> Technical Skills</h2>
+<p><strong>Robotics, sensing and embedded systems</strong><br>
+Wearable sensor development, embedded C/C++, PCB design, microcontroller-based prototyping, sensor fusion, digital signal processing and feedback control. Experience with the Robot Operating System (ROS) and programmable logic controllers (PLCs).</p>
+<p><strong>Programming, machine learning and data analysis</strong><br>
+Python and MATLAB/Simulink for engineering computation, signal analysis and algorithm development; machine learning and deep learning using TensorFlow and PyTorch, alongside data visualisation and interpretable approaches to sensor-based analysis.</p>
+<p><strong>Human movement measurement and biomedical imaging</strong><br>
+Optical and wearable motion capture, including Vicon, OptiTrack, Qualisys and inertial sensors; force-plate and plantar-pressure measurements; ultrasound, MRI and biplanar X-ray imaging. Experimental data acquisition, preprocessing and validation against reference measurements.</p>
+<p><strong>Computational biomechanics</strong><br>
+Musculoskeletal modelling and inverse kinematic and dynamic analysis with OpenSim; medical image segmentation with 3D Slicer and Avizo; subject-specific finite-element modelling and tissue analysis using Abaqus.</p>
+<p><strong>Educational technology and interactive development</strong><br>
+Virtual engineering laboratories, game-based resources and AI-supported interactive learning materials. HTML/CSS, 3D modelling and animation, with experience using Moodle, Blackboard and Canvas to support teaching and learning.</p>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a737461722d3234203e7d7d-interests" class="level2 interests">
+<h2 class="interests" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a737461722d3234203e7d7d-interests"><iconify-icon role="img" inline="" icon="octicon:star-24" aria-label="Icon star-24 from octicon Iconify.design set." title="Icon star-24 from octicon Iconify.design set."></iconify-icon> Interests</h2>
+<ul>
+<li>Human-centred robotics and assistive technologies</li>
+<li>Wearable technologies for health and mobility</li>
+<li>Sleep posture, gait and healthy ageing</li>
+<li>Interpretable machine learning for sensing applications</li>
+<li>Engineering education and inclusive learning</li>
+<li>Virtual laboratories and game-based learning</li>
+<li>Patient and public involvement in research</li>
+</ul>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6d6f727461722d626f6172642d3234203e7d7d-education" class="level2 education">
+<h2 class="education" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206f637469636f6e3a6d6f727461722d626f6172642d3234203e7d7d-education"><iconify-icon role="img" inline="" icon="octicon:mortar-board-24" aria-label="Icon mortar-board-24 from octicon Iconify.design set." title="Icon mortar-board-24 from octicon Iconify.design set."></iconify-icon> Education</h2>
+<ul>
+<li><p><strong>MEd in Academic Practice | 2026 - present</strong><br>
+Queen Mary Academy<br>
+Queen Mary University of London<br>
+<em>In progress</em></p></li>
+<li><p><strong>Postgraduate Certificate in Academic Practice | 2026</strong><br>
+Queen Mary Academy<br>
+Queen Mary University of London</p></li>
+<li><p><strong>PhD in Engineering | 2025</strong><br>
+Department of Mechanical, Materials and Aerospace Engineering<br>
+University of Liverpool<br>
+Thesis: intelligent wearable sensing for human sleep posture classification and temporal analysis.</p></li>
+<li><p><strong>MEng in Mechatronic Engineering | 2019</strong><br>
+Department of Electrical and Electronic Engineering<br>
+University of Nottingham<br>
+First-class honours.</p></li>
+</ul>
+</section>
+</div>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/omarelnaggar007\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© <span id="current-year"></span> <a href="./index.html" target="_blank" rel="noopener noreferrer">Omar Elnaggar</a>.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script id="quarto-ordinal-dates" type="text/javascript">
+  const dateElements = document.querySelectorAll("p.date, p.date-modified, div.listing-date, div.listing-file-modified");
+  dateElements.forEach((el) => {
+    el.innerHTML = el.innerHTML.replace(
+      /(\d+)(st|nd|rd|th)/g,
+      "$1<sup style='font-size:0.5em;font-style:italic;'>$2</sup>"
+    );
+  });
+</script>
+<script id="quarto-current-year" type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear;
+  });
+</script>
+<script id="quarto-categories-alphabetical" type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const categories = document.querySelectorAll(".quarto-listing-category .category");
+    const container = document.querySelector(".quarto-listing-category");
+
+    // Preserve native click behaviour for pointer and keyboard activation alike.
+    document.addEventListener("keydown", function (event) {
+      const control = event.target.closest('.category[role="button"], .listing-category[role="button"]');
+      if (control && (event.key === "Enter" || event.key === " ")) {
+        event.preventDefault();
+        if (!event.repeat) control.click();
+      }
+    });
+    const categoryMap = {};
+
+    categories.forEach(category => {
+      category.setAttribute("role", "button");
+      category.tabIndex = 0;
+      const dataCategory = category.getAttribute("data-category");
+      const decodedCategory = atob(dataCategory);
+      const firstLetter = decodedCategory.charAt(0).toUpperCase();
+      if (!categoryMap[firstLetter]) {
+        categoryMap[firstLetter] = [];
+      }
+      categoryMap[firstLetter].push(category);
+    });
+
+    Object.keys(categoryMap).sort().forEach(letter => {
+      const groupDiv = document.createElement("div");
+      groupDiv.classList.add("category-group");
+      const button = document.createElement("div");
+      button.classList.add("category", "collapsed");
+      button.setAttribute("data-bs-toggle", "collapse");
+      button.setAttribute("data-bs-target", `#collapse-category-${letter}`);
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", `Toggle ${letter} categories`);
+      button.setAttribute("aria-controls", `collapse-category-${letter}`);
+      button.setAttribute("role", "button");
+      button.tabIndex = 0;
+      button.innerHTML = `<div style="font-style: italic;">${letter}</div>`;
+      const collapseDiv = document.createElement("div");
+      collapseDiv.classList.add("collapse");
+      collapseDiv.id = `collapse-category-${letter}`;
+
+      if (letter.length === 0) {
+        categoryMap[letter].forEach(category => {
+          container.appendChild(category);
+        });
+      } else {
+        categoryMap[letter].forEach(category => {
+          collapseDiv.appendChild(category);
+        });
+        groupDiv.appendChild(button);
+        groupDiv.appendChild(collapseDiv);
+        container.appendChild(groupDiv);
+      }
+    });
+  });
+</script>
+<!-- Custom JavaScript for clipboard.js to properly access code inside modals -->
+<script id="quarto-extensions-listing-clipboardjs" type="text/javascript">
+  // General clipboard.js setup for modals
+  window.document.addEventListener('DOMContentLoaded', (event) => {
+    /**
+    * Initialise clipboard functionality for any modal
+    */
+    const initialiseModalClipboard = () => {
+      // Find all modals in the document
+      const modals = document.querySelectorAll('.modal');
+
+      modals.forEach((modal) => {
+        const modalId = modal.getAttribute('id');
+        if (!modalId) return;
+
+        // Find code copy buttons within this modal
+        const copyButtons = modal.querySelectorAll('.code-copy-button');
+        if (copyButtons.length === 0) return;
+
+        // Add data-in-quarto-modal attribute to buttons in this modal
+        copyButtons.forEach((button) => {
+          button.setAttribute('data-in-quarto-modal', modalId);
+        });
+
+        console.log(`Initialising clipboard for modal: ${modalId}`);
+
+        // Create clipboard instance for this modal
+        const clipboardModal = new window.ClipboardJS(
+          `.code-copy-button[data-in-quarto-modal="${modalId}"]`,
+          {
+            text: (trigger) => {
+              // Get text from the code element, excluding annotations
+              const codeEl = trigger.previousElementSibling.cloneNode(true);
+              const annotations = codeEl.querySelectorAll('[class*="code-annotation-"]');
+              annotations.forEach((annotation) => annotation.remove());
+              return codeEl.innerText;
+            },
+            container: modal // Set the modal as container for clipboard operations
+          }
+        );
+
+        // Success handler with visual feedback
+        clipboardModal.on('success', (e) => {
+          const button = e.trigger;
+          button.blur();
+
+          // Visual feedback
+          button.classList.add('code-copy-button-checked');
+          const currentTitle = button.getAttribute('title');
+          button.setAttribute('title', 'Copied!');
+
+          // Bootstrap tooltip feedback
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute('data-bs-toggle', 'tooltip');
+            button.setAttribute('data-bs-placement', 'left');
+            button.setAttribute('data-bs-title', 'Copied!');
+            tooltip = new bootstrap.Tooltip(button, {
+              trigger: 'manual',
+              customClass: 'code-copy-button-tooltip',
+              offset: [0, -8]
+            });
+            tooltip.show();
+          }
+
+          // Reset after 1 second
+          setTimeout(() => {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute('data-bs-title');
+              button.removeAttribute('data-bs-toggle');
+              button.removeAttribute('data-bs-placement');
+            }
+            button.setAttribute('title', currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+
+          e.clearSelection();
+          console.log(`Copied from modal ${modalId}:`, e.text);
+        });
+
+        // Error handler
+        clipboardModal.on('error', (e) => {
+          console.error(`Clipboard error in modal ${modalId}:`, e);
+          const button = e.trigger;
+          button.setAttribute('title', 'Press Ctrl+C to copy');
+
+          // Visual feedback for error
+          button.style.backgroundColor = '#f8d7da';
+          setTimeout(() => {
+            button.style.backgroundColor = '';
+            button.setAttribute('title', 'Copy to Clipboard');
+          }, 2000);
+        });
+      });
+    };
+
+    // Initialise clipboard for modals
+    initialiseModalClipboard();
+
+    // Also initialise when modals are shown (in case of dynamic content)
+    document.addEventListener('shown.bs.modal', () => {
+      initialiseModalClipboard();
+    });
+  });
+</script>
+<script id="quarto-external-links" type="text/javascript">
+  function addSecurityAttributes(link) {
+    if (link.getAttribute('target') === '_blank') {
+      const currentRel = link.getAttribute('rel') || '';
+      const relValues = new Set(currentRel.split(/\s+/).filter(Boolean));
+      relValues.add('noopener');
+      relValues.add('noreferrer');
+      link.setAttribute('rel', Array.from(relValues).join(' '));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[target="_blank"]').forEach(addSecurityAttributes);
+
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === 1) {
+            if (node.tagName === 'A') {
+              addSecurityAttributes(node);
+            }
+            node.querySelectorAll('a[target="_blank"]').forEach(addSecurityAttributes);
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+<script>
+  document.querySelectorAll('header#title-block-header div, header#title-block-header p').forEach(function(el) {
+    if (!el.textContent.trim()) {
+      el.style.display = 'none';
+      el.textContent = "";
+    }
+  });
+</script>
+
+
+
+
+</body></html>
